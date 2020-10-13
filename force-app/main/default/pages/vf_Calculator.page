@@ -1,0 +1,25 @@
+<apex:page controller="vf_Calculator">
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations</h1>
+  <Apex:form >
+     <apex:pageBlock id="calc">
+     <apex:pageBlockButtons >
+                 <apex:commandButton action="{!addMethod}" value="ADD" reRender="calc"/>
+                 <apex:commandButton action="{!subMethod}" value="SUB" reRender="calc"/>
+                 <apex:commandButton action="{!multiMethod}" value="MULITPLY" reRender="calc"/>
+                 <apex:commandButton action="{!resetMethod}" value="Reset" reRender="calc"/>
+             </apex:pageBlockButtons>
+         <apex:pageBlockSection >
+              <apex:pageBlockSectionItem >
+                 Enter a value : <apex:inputText value="{!aval}" />
+             </apex:pageBlockSectionItem>
+             <apex:pageBlockSectionItem >
+                 Enter b value : <apex:inputText value="{!bval}" />
+             </apex:pageBlockSectionItem> 
+             <apex:pageBlockSectionItem >
+                 Result of value is : <apex:outputText value="{!result}" />
+             </apex:pageBlockSectionItem>  
+         </apex:pageBlockSection>
+     </apex:pageBlock>
+  </apex:form>
+</apex:page>

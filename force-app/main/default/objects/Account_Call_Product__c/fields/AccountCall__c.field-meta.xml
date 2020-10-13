@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AccountCall__c</fullName>
+    <externalId>false</externalId>
+    <label>AccountCall</label>
+    <referenceTo>Account_Call__c</referenceTo>
+    <relationshipLabel>Account Call Product</relationshipLabel>
+    <relationshipName>Account_Call_Product</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

@@ -1,0 +1,4 @@
+.container {
+    padding-left: var(--lwc-spacingsmall, 0.3rem);
+    padding-right: var(--lwc-spacingsmall, 0.3rem);
+}

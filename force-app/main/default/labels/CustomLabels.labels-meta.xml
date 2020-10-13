@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>AdminId</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AdminId</shortDescription>
+        <value>00590000003gQIL</value>
+    </labels>
+    <labels>
+        <fullName>Offer_Details</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Offer Details</shortDescription>
+        <value>https://www.ema.europa.eu/medicines/human/EPAR/yescarta#product-information-section</value>
+    </labels>
+    <labels>
+        <fullName>SL_Label_Search</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SL_Label_Search</shortDescription>
+        <value>Search</value>
+    </labels>
+    <labels>
+        <fullName>createdByDate</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>createdByDate</shortDescription>
+        <value>createdbydate</value>
+    </labels>
+</CustomLabels>

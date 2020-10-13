@@ -1,0 +1,35 @@
+.vertical_center {
+  display: flex;
+  align-items: center;
+}
+.outer_container {
+  min-height: 135px;
+}
+.text_container {
+  text-align: center;
+  margin-top: var(--lwc-spacingSmall, 0.75rem);
+}
+.image_container {
+  text-align: center;
+}
+.title {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .outer_container {
+    min-height: 0;
+  }
+}
+@media screen and (min-width: 1024px){
+  .image_container {
+    text-align: left;
+  }
+  .text_container {
+    text-align: left;
+    margin-top: 0;
+  }
+  .title {
+    font-size: 1.25rem;
+  }
+}

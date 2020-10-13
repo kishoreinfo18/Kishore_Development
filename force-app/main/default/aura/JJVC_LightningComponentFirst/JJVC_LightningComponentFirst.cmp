@@ -1,0 +1,23 @@
+<aura:component >
+    <br></br>
+    <div class="slds-scrollable--x">
+	<div class = "slds-align_absolute-Center" style="height: 01rem;">This content will be positioned in the absolute center of its container</div>
+    <div class="slds-box slds-box_small">
+    <div style="padding: 01rem;">
+  <div class="slds-align_absolute-center" style="text-align: center; width: 18rem; background-color: rgb(255, 128, 111);">
+    <div class="slds-border_top">This should have a top border.</div>
+  </div>
+</div>              
+    </div>
+        <lightning:button label="PUSH ME"/>
+  </div> 
+    <div class="white">
+    	Hello Kishore
+    </div>
+    <h2>Check out the list of colors</h2>
+    <ul>
+    	<li class="green"> This is Green color text</li> 
+        <li class="violet"> This is violet color text</li>
+        <li class="yellow"> This is yellow color text</li>
+    </ul>
+</aura:component>

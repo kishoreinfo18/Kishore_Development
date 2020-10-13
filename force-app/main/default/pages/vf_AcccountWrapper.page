@@ -1,0 +1,6 @@
+<apex:page controller="WrapClassOnAccount">
+    <apex:form >
+        <apex:pageBlock title="Account Detail before selecting accounts">
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

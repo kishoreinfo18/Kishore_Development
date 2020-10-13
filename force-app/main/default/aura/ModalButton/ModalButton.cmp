@@ -1,0 +1,25 @@
+<aura:component >
+    <!-- 
+    /**
+     * Webkul Software.
+     *
+     * @category  Webkul
+     * @author    Webkul
+     * @copyright Copyright (c) 2010-2016 Webkul Software Private Limited (https://webkul.com)
+     * @license   https://store.webkul.com/license.html
+     */
+     -->
+   
+    <!--handler for removing component-->
+    <aura:handler name="RemoveComponent" action="{!c.removeComponent}" event="c:RemoveComponent"/>
+     
+    <div class="wk_static">
+        <!--create component dynamically on button click-->
+        <button class="slds-button slds-button--neutral" onclick="{!c.getCompnent}">Open Modal</button>    
+         
+        <!--set component in the varible {!v.body}-->
+        <div aura:id="cmpBody">
+            {!v.body}
+        </div>
+    </div>
+</aura:component>

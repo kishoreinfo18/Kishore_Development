@@ -1,0 +1,12 @@
+img{
+ float:left;
+}
+.lgc-bg {
+  background-color: rgb(242, 242, 242);
+}
+.grid-container {
+  display:flex;
+}
+.divpadding {
+  padding-top: 15px;
+}

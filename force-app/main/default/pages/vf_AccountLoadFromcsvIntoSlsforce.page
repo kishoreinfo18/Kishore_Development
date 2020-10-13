@@ -1,0 +1,24 @@
+<apex:page controller="importDataFromCSVController">
+    <apex:form >
+        <apex:pagemessages />
+        <apex:pageBlock >
+            <apex:pageBlockSection columns="7">
+                <apex:inputFile value="{!csvFileBody}" filename="{!csvAsString}" > </apex:inputFile>
+                <apex:commandButton value="Import Account" action="{!importCSVFile}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:pageBlock >
+            <apex:pageblocktable value="{!accList}" var="acc">
+                <apex:column value="{!acc.name}" />
+                <apex:column value="{!acc.Type}" />
+                <apex:column value="{!acc.shippingstreet}"/>
+                <apex:column value="{!acc.shippingCity}"/>
+                <apex:column value="{!acc.shippingPostalCode}"/>
+                <apex:column value="{!acc.shippingCountry}"/>
+                <apex:column value="{!acc.ISCUSTOMERPORTAL__c}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        Account data Position :  <apex:outputText value="{!postionOfName}"></apex:outputText>
+    </apex:form>
+ 
+</apex:page>

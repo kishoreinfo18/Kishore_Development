@@ -1,0 +1,9 @@
+<aura:component >
+    <h1> THis is attribute component : TestLigtningAttributeComponent</h1>
+    <aura:attribute name="firstName" type="string" default="kishore Reddy" />
+    <aura:attribute name="designation" type="string" default="SoftwareEngineer"/>
+    <P>{!'Name of the resource is :'+v.firstname}</P>
+    <p>{!'designation of resource is :'+v.designation}</p>
+    
+	
+</aura:component>

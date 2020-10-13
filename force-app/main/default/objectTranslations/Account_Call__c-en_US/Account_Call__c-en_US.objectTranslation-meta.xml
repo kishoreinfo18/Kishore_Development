@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Account Call</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Account Calls</value>
+    </caseValues>
+    <layouts>
+        <layout>Account Call Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Account Call-TBM layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- New Account Call --></label>
+        <name>New_Account_Call</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- UploadFiles --></label>
+        <name>UploadFiles</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- Record Type to be used for all ISR Users --></description>
+        <label><!-- Account Call ISR --></label>
+        <name>Account_Call_ISR</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record Type to be used for all TBM Users --></description>
+        <label><!-- Account Call TBM --></label>
+        <name>Account_Call_TBM</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Account Call Read Only Recordtype --></description>
+        <label><!-- Call Read Only --></label>
+        <name>Call_Read_Only</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

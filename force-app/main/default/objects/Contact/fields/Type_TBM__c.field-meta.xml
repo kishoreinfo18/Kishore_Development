@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_TBM__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Owner/Optician</fullName>
+                <default>false</default>
+                <label>Owner/Optician</label>
+            </value>
+            <value>
+                <fullName>Retail Manager</fullName>
+                <default>false</default>
+                <label>Retail Manager</label>
+            </value>
+            <value>
+                <fullName>Staff Member</fullName>
+                <default>false</default>
+                <label>Staff Member</label>
+            </value>
+            <value>
+                <fullName>General Manager</fullName>
+                <default>false</default>
+                <label>General Manager</label>
+            </value>
+            <value>
+                <fullName>MD</fullName>
+                <default>false</default>
+                <label>MD</label>
+            </value>
+            <value>
+                <fullName>OD</fullName>
+                <default>false</default>
+                <label>OD</label>
+            </value>
+            <value>
+                <fullName>Office Manager</fullName>
+                <default>false</default>
+                <label>Office Manager</label>
+            </value>
+            <value>
+                <fullName>Optician</fullName>
+                <default>false</default>
+                <label>Optician</label>
+            </value>
+            <value>
+                <fullName>PAC Attendee</fullName>
+                <default>false</default>
+                <label>PAC Attendee</label>
+            </value>
+            <value>
+                <fullName>Receptionist</fullName>
+                <default>false</default>
+                <label>Receptionist</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

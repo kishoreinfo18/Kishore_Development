@@ -1,0 +1,6 @@
+<apex:page controller="vf_StudentDetails">
+    Name :{!Name} <br/>
+    Age  :{!Age} <br/>
+    Phone :{!phone}
+  
+</apex:page>

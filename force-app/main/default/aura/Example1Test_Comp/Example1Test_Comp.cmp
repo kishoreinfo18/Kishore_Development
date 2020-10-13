@@ -1,0 +1,9 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+    <aura:attribute name="text" type="String" default="this is kishore" />
+    
+   <c:svg class="slds-input__icon slds-show" 
+          xlinkHref="{!$Resource.slds214 + '/assets/icons/utility-sprite/svg/symbols.svg#search'}" />
+    <lightning:button label="framework" aura:id="kishore kumar reddy" onclick="{!c.handleClick}"/> 
+	{!v.text}
+  
+</aura:component>

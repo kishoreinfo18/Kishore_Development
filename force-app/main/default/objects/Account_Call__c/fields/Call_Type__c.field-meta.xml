@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Call_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Call Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Presentation Only</fullName>
+                <default>false</default>
+                <label>Presentation Only</label>
+            </value>
+            <value>
+                <fullName>Office Process</fullName>
+                <default>false</default>
+                <label>Office Process</label>
+            </value>
+            <value>
+                <fullName>Presentation &amp; Office Process</fullName>
+                <default>false</default>
+                <label>Presentation &amp; Office Process</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

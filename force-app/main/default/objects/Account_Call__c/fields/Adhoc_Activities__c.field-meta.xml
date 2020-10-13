@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Adhoc_Activities__c</fullName>
+    <externalId>false</externalId>
+    <label>Activities</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Dx Replenishment</fullName>
+                <default>false</default>
+                <label>Dx Replenishment</label>
+            </value>
+            <value>
+                <fullName>Rx Replenishment</fullName>
+                <default>false</default>
+                <label>Rx Replenishment</label>
+            </value>
+            <value>
+                <fullName>Staff Training</fullName>
+                <default>false</default>
+                <label>Staff Training</label>
+            </value>
+            <value>
+                <fullName>Staff Training-Annual Supply</fullName>
+                <default>false</default>
+                <label>Staff Training-Annual Supply</label>
+            </value>
+            <value>
+                <fullName>Staff Training-Indus Knowledge</fullName>
+                <default>false</default>
+                <label>Staff Training-Indus Knowledge</label>
+            </value>
+            <value>
+                <fullName>Staff Training-Other</fullName>
+                <default>false</default>
+                <label>Staff Training-Other</label>
+            </value>
+            <value>
+                <fullName>Tech Follow-up</fullName>
+                <default>false</default>
+                <label>Tech Follow-up</label>
+            </value>
+            <value>
+                <fullName>Doctor Dinner</fullName>
+                <default>false</default>
+                <label>Doctor Dinner</label>
+            </value>
+            <value>
+                <fullName>Retail Management</fullName>
+                <default>false</default>
+                <label>Retail Management</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

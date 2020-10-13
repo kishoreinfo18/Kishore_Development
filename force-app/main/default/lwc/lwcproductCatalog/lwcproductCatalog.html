@@ -1,0 +1,52 @@
+<template>
+    <lightning-card title="Available Products">
+        <div class="slds-m-around-medium">
+            <lightning-input type="Search" name="enter-search" label="Search" onchange={handleKeyUp} class="inputCmp"></lightning-input>
+        </div>
+      
+        <template if:true={products.data}>
+            <template for:each={products.data} for:item="product">
+                <ul class="slds-has-dividers_bottom slds-has-blocks-links_space" key={product.Id}>
+                    
+                    <li class="slds-item board-item productRow">
+                        <div class="slds-clearfix">
+                            <div class="slds-float_left slds-align_absolute-center">
+                                {product.Name}
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </template>
+        </template>
+        <div class="slds-m-top_small slds-m-bottom_medium">
+            <lightning-button variant="brand" label="Submit" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button> 
+        </div>
+    </lightning-card> 
+        <template if:true={productDetail}>
+            <lightning-layout>
+                <lightning-layout-item padding="around-small">
+                    <div class="header-column"></div>
+                    <p class="field-title" title="Id">Id</p>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small">
+                        <div class="header-column"></div>
+                        <p class="field-title" title="Name">Name</p>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small">
+                        <div class="header-column"></div>
+                        <p class="field-title" title="ProductCode">ProductCode</p>
+                </lightning-layout-item>
+            </lightning-layout>   
+             <template for:each={productDetail} for:item="product">
+                <div key={product.Id} class="slds-m-bottom_medium">
+                        {product.Id}
+                        {product.Name}
+                        {product.ProductCode}
+                </div>
+             </template>
+            
+        </template>   
+        <template if:false={productDetail}>
+            "data not exists"
+        </template>
+</template>

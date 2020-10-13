@@ -1,0 +1,9 @@
+<!--c:childExpr-->
+<aura:component>
+    <aura:attribute name="loadingComponent" type="Boolean" default="false"/>
+    <aura:attribute name="infoObject" type="object" />
+	<!--<aura:handler name="change" value="{!v.childAttr}" action="{!c.onChildAttrChange}"/> -->
+	<p>childExpr childAttr: {!v.infoObject}</p>
+	<p><lightning:button label="Update childAttr" onclick="{!c.updateChildAttr}"/></p>
+		<!--<c:cmp_SL_LtngSpinner isSpinning="{!v.loadingComponent}" spinSize="x-small"/> -->
+</aura:component>

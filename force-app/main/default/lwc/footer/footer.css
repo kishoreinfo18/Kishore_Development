@@ -1,0 +1,30 @@
+.footer {
+    background-color: var(--lwc-colorTextDefault, #0C2934);
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.copyright {
+    text-align: center;
+}
+
+@media screen and (min-width:1024px) {
+    .footer {
+        align-items: center;
+    }
+    .footer .slds-list_horizontal {
+        justify-content: flex-end;
+    }
+    .copyright {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width:1023px) { 
+    .copyright {
+        margin-top: 1rem;
+    }
+}

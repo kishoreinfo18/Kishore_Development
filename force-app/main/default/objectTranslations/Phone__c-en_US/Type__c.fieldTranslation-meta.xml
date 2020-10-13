@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>B | Business</masterLabel>
+        <translation><!-- B | Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>F | Fax</masterLabel>
+        <translation><!-- F | Fax --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>H | Home</masterLabel>
+        <translation><!-- H | Home --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>M | Mobile</masterLabel>
+        <translation><!-- M | Mobile --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>O | Other</masterLabel>
+        <translation><!-- O | Other --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

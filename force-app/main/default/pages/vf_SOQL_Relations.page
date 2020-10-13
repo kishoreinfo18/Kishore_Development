@@ -1,0 +1,19 @@
+<apex:page controller="cls_SOQL_Relations">
+	<apex:form >
+        <apex:pageBlock title="Account contact relation records">
+        	<apex:pageBlockButtons >
+                <apex:commandButton value="StandardRecords" action="{!stndardRelation}" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{!lstAss}" var="a" rendered="{! !isnull(lstAss)}">
+                <apex:column value="{!a.name}" />
+                <apex:column value="{!a.industry}"/>
+                <apex:column >
+                    <apex:repeat value="{!a.contacts}" var="c">
+                    	{!c.firstName}
+                    </apex:repeat>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+    
+</apex:page>

@@ -1,0 +1,15 @@
+<apex:page controller="ContactWrapper_Details" >
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!wcontwr}" var="fname">
+                <apex:column headerValue="Select">
+                    <apex:facet name="Header"> <apex:inputCheckBox /></apex:facet>
+                    <apex:inputCheckBox value="{!fname.flag}" />
+                </apex:column>
+                <apex:column headerValue="FistName">
+                	{!fname.cont.phone}
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

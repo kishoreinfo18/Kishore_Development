@@ -1,0 +1,14 @@
+<aura:component >
+
+  <aura:attribute name="isSpinning" type="Boolean" default="false" description="Determine if spinner should spin" />
+  <aura:attribute name="spinSize" type="String" default="large" description="Determine if spinner should spin" />
+
+  <div class="{!v.isSpinning?'slds-spinner_container':'slds-hide'}">
+    <div class="{!'slds-spinner--brand slds-spinner slds-spinner--'+v.spinSize}" role="alert">
+      <span class="slds-assistive-text">Loading</span>
+      <div class="slds-spinner__dot-a"></div>
+      <div class="slds-spinner__dot-b"></div>
+    </div>
+  </div>
+
+</aura:component>

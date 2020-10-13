@@ -1,0 +1,12 @@
+<!--c:parentExpr-->
+<aura:component>
+<aura:attribute name="infoObject" type="object" default="parent attribute"/>
+<!--<aura:handler name="change" value="{!v.parentAttr}" action="{!c.onParentAttrChange}"/> -->
+<!-- Instantiate the child component -->
+    <p>Before parentExpr parentAttr: {!v.infoObject}</p>
+	<c:auraChildComponent infoObject="{!v.infoObject}" />
+    <aura:if isTrue= "{!v.infoObject == 'updated child attribute'}">
+		<p>After parentExpr parentAttr: {!v.infoObject}</p>
+	</aura:if>
+	<p><lightning:button label="Update parentAttr" onclick="{!c.updateParentAttr}"/></p>
+</aura:component>

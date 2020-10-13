@@ -1,0 +1,22 @@
+<apex:page standardController="Account_Call__c" extensions="AccountCallViewExtention" sidebar="false" showHeader="false">
+    <apex:form >        
+           <apex:pageBlock title="Account call Information">
+               <apex:pageBlockButtons >                       
+                   <apex:commandButton value="unlock"/>
+                   <apex:commandButton value="Schedule Next Call"/>                       
+           </apex:pageBlockButtons>
+           <apex:pageBlockSection columns="2">
+                       <apex:outputField value="{!Account_Call__c.Name}"/>
+                       <apex:outputField value="{!Account_Call__c.Account_Calls__c}"/>
+                       <apex:outputField value="{!Account_Call__c.Phone__c}" />
+                       <apex:outputField value="{!Account_Call__c.Territory__c}"/>
+                       <apex:outputField value="{!Account_Call__c.SAP_EXTRACT_FLAG__c}" rendered="{!show_SAP_Flag_ToAdmin}"/>
+              </apex:pageBlocksection> 
+              <apex:pageBlockSection Title="CallNotes" collapsible="false">
+                  <apex:outputText value="{!Account_Call__c.Call_Notes__c}" />                  
+              </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+    
+  
+</apex:page>

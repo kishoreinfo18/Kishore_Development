@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Ph Type --></label>
+    <name>Ph_Type__c</name>
+    <picklistValues>
+        <masterLabel>B|Business</masterLabel>
+        <translation><!-- B|Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>P|Personal</masterLabel>
+        <translation><!-- P|Personal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>U|Unknown</masterLabel>
+        <translation><!-- U|Unknown --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

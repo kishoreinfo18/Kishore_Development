@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Vendor --></label>
+    <name>Vendor__c</name>
+    <picklistValues>
+        <masterLabel>Alcon</masterLabel>
+        <translation><!-- Alcon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B&amp;L</masterLabel>
+        <translation><!-- B&amp;L --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cooper</masterLabel>
+        <translation><!-- Cooper --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JJVC</masterLabel>
+        <translation><!-- JJVC --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

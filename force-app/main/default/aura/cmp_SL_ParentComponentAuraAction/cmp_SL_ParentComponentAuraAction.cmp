@@ -1,0 +1,5 @@
+<aura:component >
+    <c:cmp_SL_ChildComponentAuraAction myAction="{!c.clap}"/>
+    <c:cmp_SL_ChildComponentAuraAction myAction="{!c.jump}"/>
+    <c:cmp_SL_ChildComponentAuraAction myAction="{!c.dance}"/>
+</aura:component>

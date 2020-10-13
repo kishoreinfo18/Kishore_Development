@@ -1,0 +1,15 @@
+<template>
+    <lightning-card  title="search Incident">
+        <lightning-input type="text" name="accntNumber" label="Account Number" value={accntNum} onchange={handleAccntType} >
+        </lightning-input>
+        <template if:true = {typeValues.data}>
+            <lightning-combobox
+                name="Type"
+                label="Type"
+                value={typeValue}
+                placeholder="Select type"
+                options={typeValues.data.values}
+                onchange={handleChange} ></lightning-combobox>
+        </template>
+    </lightning-card>
+</template>

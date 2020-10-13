@@ -1,0 +1,14 @@
+<template>
+    <template if:true = {salutationvalues}>
+        <lightning-combobox name="ContactSalutation" 
+            label="Salutation" 
+            value={value} 
+            placeholder="-Select-"
+            options={salutationvalues} 
+            onchange={handleChange}>
+        </lightning-combobox> 
+    </template> 
+    <template if:false = {salutationvalues}>
+        kishore
+    </template>
+</template>

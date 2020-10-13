@@ -1,0 +1,12 @@
+<aura:component >
+    <aura:registerEvent name="getAccount" type="c:EmployeeEvent" />
+    <aura:attribute name="AccountNumber" type="string" />
+    <aura:attribute type="string" name="Name" />
+    <div class="row">
+    	<ui:inputText label="Account Number" value="{!v.AccountNummber}" /> 
+	</div>
+    <div class="row">
+    	<ui:inputText label="Name" value="{!v.AccountName}" /> 
+	</div>
+    <ui:button label="submit" press="{!c.getAccoountDetails}" />
+</aura:component>

@@ -1,0 +1,52 @@
+<template>
+    <div class="slds-modal__container">
+        <div class="slds-modal__header">
+            <h1> Youperience</h1>
+        </div>
+        <div class="slds-modal__content slds-p-around--medium">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_1-of-3">
+                    <c-contact-salutation-lwc></c-contact-salutation-lwc>
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                    <lightning-input data-id="fName" label="FirstName" value={contactObj.firstName} required=''>
+                    </lightning-input>
+                    <template if:true = {firstNameError}>
+                        {firstNameError}
+                    </template>
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                    <lightning-input label="LastName" value={contactObj.lastName}>
+                    </lightning-input>
+                </div>
+            </div>
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_1-of-2 slds-p-around_medium">
+                    <lightning-input label="Email" type="email" value={contactObj.email}>
+                    </lightning-input>
+                </div>
+                <div class="slds-grid slds-size_1-of-2 slds-p-around_medium">
+                    <div class="slds-col slds-size_2-of-3 slds-p-right--medium">
+                        <lightning-input type="tel"
+                            label="Telephone"
+                            value={contactObj.telephoneNumber}
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-3 slds-p-left--medium">
+                        <lightning-input type="number"
+                           label="Extension" value={extensionValue}>
+                        </lightning-input>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-modal__footer">
+            <lightning-button variant="brand" label="Save" title="Primary action" onclick={handleClickSave} class="slds-m-right_x-small">
+            </lightning-button>
+            <lightning-button variant="brand" label="Close" title="Primary action" onclick={handleClickClose} class="slds-m-right_x-small">
+            </lightning-button>
+        </div>
+    </div> 
+    
+</template>

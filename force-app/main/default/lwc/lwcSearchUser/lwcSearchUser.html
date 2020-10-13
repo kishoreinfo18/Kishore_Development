@@ -1,0 +1,52 @@
+<template>
+    <p> User details are :</p>
+    <!--<div class="slds-form-element"> -->
+        {focVar}
+        <div class="slds-form-element">
+        <div class="slds-form-element__control">
+            <div class="slds-combobox_container">
+                <div class={txtclassname} data-id="resultBox" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon slds-input-has-icon_left-right" role="none">
+                    <button
+                        class="slds-button slds-button_icon slds-input__icon slds-input__icon_right" title="Remove selected option">
+                        <span class="slds-assistive-text">Remove selected option</span>
+                    </button>
+                        <lightning-input data-id="userinput" id="input" value={searchKey} onchange={accountInputValue}
+                        ariant="label-hidden"  placeholder="Search..."></lightning-input>
+                    </div>
+                    <!-- Second part display result -->
+                <div if:true={focVar}>
+                  <div id="listbox-id-1" class="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid" role="listbox">
+                        <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                            <template for:each={userDetails} for:item="userDetail">
+                                <li role="presentation" class="slds-listbox__item" key={userDetail.Id} >
+                                    <div data-id={userDetail.Id} data-name={userDetail.Name} onclick={setSelectedRecord} class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+                                        <span class="slds-media__body">
+                                            <span class="slds-listbox__option-text slds-listbox__option-text_entity">{userDetail.Name}</span>
+                                        </span>
+                                    </div>
+                                </li>
+                            </template>
+                        </ul>
+                    </div> 
+                </div>  
+                </div>
+            </div>
+            <template if:true={SalutationValues.data}>
+                <div class="slds-m-around_medium">
+                    <template if:true={SalutationValues.data}>
+                        <lightning-combobox name="progress"
+                                label="Salutation"
+                                value={value}
+                                placeholder="-Select-"
+                                options={SalutationValues.data.values}
+                                onchange={handleChange} >
+                        </lightning-combobox>
+
+                    </template>
+                </div>
+            </template>
+        </div>
+    
+    </div>  
+</template>

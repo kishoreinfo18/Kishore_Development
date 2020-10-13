@@ -1,0 +1,93 @@
+<template>
+  <footer class="footer slds-p-around_large slds-p-vertical_x-large slds-align_absolute-center" style={footerFontColor}>
+    <div class="container slds-grid slds-wrap slds-p-horizontal_medium" style={maximumWidth}>
+      <div class="slds-col slds-size_1-of-1 slds-m-bottom_large">
+        <ul class="slds-list_horizontal slds-align_absolute-center">
+          <li class="slds-m-horizontal_small">
+            <a href="https://www.linkedin.com/company/simplyhealth" target="_blank">
+              <img src={linkedinLogo}>
+            </a>
+          </li>
+          <li class="slds-m-horizontal_small">
+            <a href="https://www.facebook.com/simplyhealthuk" target="_blank">
+              <img src={facebookLogo}>
+            </a>
+          </li>
+          <li class="slds-m-horizontal_small">
+            <a href="https://www.instagram.com/simplyhealthuk" target="_blank">
+              <img src={instagramLogo}>
+            </a>
+          </li>
+          <li class="slds-m-horizontal_small">
+            <a href="https://twitter.com/SimplyhealthUK" target="_blank">
+              <img src={twitterLogo}>
+            </a>
+          </li>
+          <li class="slds-m-horizontal_small">
+            <a href="https://www.youtube.com/channel/UCLOhC3tc2_Oy_6VQ6kvrhvw" target="_blank">
+              <img src={youtubeLogo}>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="copyright slds-col slds-size_1-of-1 slds-large-size_4-of-12 slds-order_2 slds-large-order_1">
+        &copy; Simplyhealth {currentYear}. All rights reserved.
+      </div>
+      <div
+        class="slds-col slds-size_1-of-1 slds-large-size_8-of-12 slds-text-align_center slds-order_1 slds-large-order_2">
+        <ul class="slds-list_horizontal slds-grid slds-wrap slds-grid_align-center">
+          <template if:true={firstTitle}>
+            <li class="slds-m-horizontal_x-small">
+              <a href={firstUrl} target="_blank" style={footerFontColor}>{firstTitle}</a>
+            </li>
+          </template>
+          <template if:true={secondTitle}>
+            <li class="slds-m-horizontal_x-small">
+              <a href={secondUrl} target="_blank" style={footerFontColor}>{secondTitle}</a>
+            </li>
+          </template>
+          <template if:true={thirdTitle}>
+            <li class="slds-m-horizontal_x-small">
+              <a href={thirdUrl} target="_blank" style={footerFontColor}>{thirdTitle}</a>
+            </li>
+          </template>
+          <template if:true={fourthTitle}>
+            <li class="slds-m-horizontal_x-small">
+              <a href={fourthUrl} target="_blank" style={footerFontColor}>{fourthTitle}</a>
+            </li>
+          </template>
+          <template if:true={fifthTitle}>
+            <li class="slds-m-horizontal_x-small">
+              <a href={fifthUrl} target="_blank" style={footerFontColor}>{fifthTitle}</a>
+            </li>
+          </template>
+          <template if:true={sixthTitle}>
+            <li class="slds-m-horizontal_x-small">
+              <a href={sixthUrl} target="_blank" style={footerFontColor}>{sixthTitle}</a>
+            </li>
+          </template>
+          <template if:true={seventhTitle}>
+            <li class="slds-m-horizontal_x-small">
+              <a href={seventhUrl} target="_blank" style={footerFontColor}>{seventhTitle}</a>
+            </li>
+          </template>
+          <template if:true={eigthTitle}>
+            <li class="slds-m-horizontal_x-small">
+              <a href={eigthUrl} target="_blank" style={footerFontColor}>{eigthTitle}</a>
+            </li>
+          </template>
+          <template if:true={ninthTitle}>
+            <li class="slds-m-horizontal_x-small">
+              <a href={ninthUrl} target="_blank" style={footerFontColor}>{ninthTitle}</a>
+            </li>
+          </template>
+          <template if:true={tenthTitle}>
+            <li class="slds-m-horizontal_x-small">
+              <a href={tenthUrl} target="_blank" style={footerFontColor}>{tenthTitle}</a>
+            </li>
+          </template>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</template>

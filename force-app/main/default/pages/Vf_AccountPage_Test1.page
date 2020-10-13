@@ -1,0 +1,12 @@
+<apex:page standardController="Account">
+    <Apex:form >
+        <h> Account Page with standard page form</h> 
+        <apex:pageBlocK >
+        	<apex:pageBlockSection columns="2">
+        Account Name : <apex:inputField value="{!account.name}"/> 
+                <apex:inputField value="{!account.phone}" />
+        <apex:commandButton action="{!save}" />
+                </apex:pageBlockSection>
+        </apex:pageBlocK>
+    </Apex:form>
+</apex:page>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <componentInstances>
+            <componentName>incident_LWC1</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentName>lwcSearchUser</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentName>contactLwc</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentName>accountcontactpubsubParent</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentName>searchAccount</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentName>parent_To_ChildCommunication</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentName>lwcCustomLookup</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentName>parentApiExample</componentName>
+        </componentInstances>
+        <name>main</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Account Incident LWC</masterLabel>
+    <template>
+        <name>flexipage:defaultAppHomeTemplate</name>
+    </template>
+    <type>AppPage</type>
+</FlexiPage>

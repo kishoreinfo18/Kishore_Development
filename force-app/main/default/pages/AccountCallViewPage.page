@@ -1,0 +1,64 @@
+<apex:page standardController="Account_Call__c" extensions="AccountCallController" sidebar="true" >
+ <apex:sectionHeader title="Create/Edit account Calls" subtitle="AccountCall.name"/>
+     <apex:form >
+         <apex:pageBlock title="Create/Edit Account Calls" id="thePageBlock" mode="edit">
+             <apex:pageMessages id="messages" />
+                 <apex:pageBlockButtons >
+                     <apex:commandButton value="Save" /> 
+                     <apex:commandButton value="Submit" />
+                     <apex:commandButton value="Cancel" />
+                 </apex:pageBlockButtons>
+         <apex:actionRegion >
+             <apex:pageBlockSection title="Account Call Information" columns="1">
+              </apex:pageBlockSection>
+                 <apex:outputPanel title="Call Notes">
+                      <table cellpadding="6" border="1" style="table-layout:auto;margin:10px;width:100%;"  >                       
+                       <tr>
+                            <td >
+                               <apex:outputLabel Value="Account"/>
+                             </td>
+                             <td align="left">  
+                               <apex:inputField value="{!accountCall.Account_Calls__c}"/>
+                             </td>
+                             <td>
+                                <apex:outputLabel value="Call Date"/>
+                             </td>   
+                             <td>
+                                 <apex:inputField value="{!accountCall.Start_Date__c}"/> &nbsp;&nbsp;
+                                 <apex:inputField value="{!accountCall.Duration_Minutes__c}"/>
+                             </td>      
+                       </tr>
+                          <tr>
+                              <td>
+                               <apex:outputLabel value="Account #"/>
+                              </td>
+                              <td>
+                                  <apex:outputText value="{!AccountNumber}"/>
+                              </td>    
+                              <td>
+                                  <apex:outputLabel value="Status"/>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  <apex:outputLabel value="Address" />
+                              </td>
+                              <td>
+                                  <apex:outputLabel value="sub status"/>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  <apex:outputLabel value="Phone" />
+                              </td>
+                              <td>
+                                  <apex:outputLabel value="Next Call Date"/>
+                              </td>
+                          </tr>
+                           
+                      </table> 
+                </apex:outputPanel>    
+         </apex:actionRegion>    
+         </apex:pageBlock>
+     </apex:form>
+</apex:page>

@@ -1,0 +1,15 @@
+<apex:page controller="accountsDisplayPageRef">
+  <apex:form >
+      <apex:pageBlock >
+      <apex:commandButton value="BillingCity Null" action="{!BillingCity}"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <apex:commandButton value="BillingCity NotNull" action="{!BillingCityNotNull}"/>
+          <Apex:pageBlockTable value="{!acts}" var="a">
+               <apex:column value="{!a.name}"/>
+               <apex:column value="{!a.AccountNumber}"/>
+               <apex:column value="{!a.fax}"/>
+               <apex:column value="{!a.Phone}"/>
+          </Apex:pageBlockTable>
+      </apex:pageBlock>
+      
+  </apex:form>
+</apex:page>

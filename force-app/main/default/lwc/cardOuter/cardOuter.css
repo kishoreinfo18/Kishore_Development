@@ -1,0 +1,10 @@
+.outer_container {
+    border-radius: 0.6rem;
+    color: var(--lwc-colorTextDefault, black);
+    box-shadow: 0 0 8px 2px var(--lwc-colorBorder, rgb(192, 192, 192));
+}
+
+.hoverable:hover {
+    background-color: var(--lwc-colorBackgroundShade, rgb(233, 235, 234));
+    cursor: pointer;
+}

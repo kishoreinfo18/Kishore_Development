@@ -1,0 +1,22 @@
+<apex:page standardController="Account" extensions="cls_jjvc_KitAssessments" standardStylesheets="true">
+  <apex:form >
+      <apex:pageBlock id="kitTable" mode="inlineEdit">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <apex:outputLabel value="Select Kit Type" style="font-weight:600;font-size:11px"></apex:outputLabel>
+            &nbsp;&nbsp;
+            <apex:selectList Id="kitsList" value="{!kitsType}" size="1" onchange="loadSelectedKits(this.value);">
+                <apex:selectOption ItemLabel="JJVC" ItemValue="JJVC" />
+                <apex:selectOption ItemLabel="Alcon" ItemValue="Alcon" />
+                <apex:selectOption ItemLabel="B&L" ItemValue="B&L" />
+                <apex:selectOption ItemLabel="Cooper" ItemValue="Cooper" />
+                <apex:selectOption ItemLabel="PVT Label" ItemValue="PVT Label" />
+            </apex:selectList>
+           
+          <apex:actionFunction Name="loadSelectedKits" action="{!getAssessmentKits}" >
+          </apex:actionFunction> 
+      </apex:pageBlock>
+  </apex:form>
+</apex:page>

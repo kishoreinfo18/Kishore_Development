@@ -1,0 +1,5 @@
+<apex:page standardController="Opportunity" extensions="CreateInvoiceQuickActionVF" action="{!createInvoice}">
+<apex:form >
+<apex:inputHidden value="{!Opportunity.Id}"/>
+</apex:form>
+</apex:page>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cell_Order_Numberw12</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Cell Order Numberw12</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>IF(ISPICKVAL(Type_TBM__c, &quot;MD&quot;),window.open(&quot;/0030I00001khqaH&quot;))</url>
+</WebLink>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>AWS_Cognito_Consumer_Link_Dummy</label>
+    <protected>false</protected>
+    <values>
+        <field>ClientId__c</field>
+        <value xsi:type="xsd:string">5n6c9ols29v348smg5a11b146l</value>
+    </values>
+    <values>
+        <field>CognitoLoginURL__c</field>
+        <value xsi:type="xsd:string">https://shdummydomain.auth.us-east-2.amazoncognito.com/login?</value>
+    </values>
+    <values>
+        <field>ResponseType__c</field>
+        <value xsi:type="xsd:string">code</value>
+    </values>
+    <values>
+        <field>accessTokenUrl__c</field>
+        <value xsi:type="xsd:string">https://shdummydomain.auth.us-east-2.amazoncognito.com/oauth2/token</value>
+    </values>
+    <values>
+        <field>authUrl__c</field>
+        <value xsi:type="xsd:string">https://shdummydomain.auth.us-east-2.amazoncognito.com/oauth2/authorize</value>
+    </values>
+    <values>
+        <field>redirectUrl__c</field>
+        <value xsi:type="xsd:string">https://kishoredevlwccomm-developer-edition.ap7.force.com/services/authcallback/AWS_Cognito_Consumer_Link_Dummy</value>
+    </values>
+    <values>
+        <field>scope__c</field>
+        <value xsi:type="xsd:string">openid</value>
+    </values>
+    <values>
+        <field>secret__c</field>
+        <value xsi:type="xsd:string">113emns1ahukt7qt4uhhn04047alr7dp9u6vvk6rn1iktcf51tp</value>
+    </values>
+    <values>
+        <field>userAPIUrl__c</field>
+        <value xsi:type="xsd:string">https://shdummydomain.auth.us-east-2.amazoncognito.com/oauth2/userInfo</value>
+    </values>
+    <values>
+        <field>userAPIVersionUrl__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

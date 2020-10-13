@@ -1,0 +1,18 @@
+<apex:page Standardcontroller="Account" recordSetVar="acc" extensions="PopulateAccountDescription">
+   <apex:form >
+    <apex:pageBlock title="Account Information">
+      <apex:pageBlockTable value="{!Acc}" var="a">
+        <apex:Column Headervalue="Account Name">
+        <apex:commandLink value="{!a.name}" action="{!populateDescr}">
+        </apex:commandLink>
+        </apex:column>
+        <apex:Column HeaderValue="Account Phone">
+        <apex:outputLink value="{!a.phone}">{!a.phone} </apex:outputLink>
+        </apex:column>
+        <apex:Column Headervalue="Account CustomerPriority"> 
+        <apex:outputLink value="{!a.CustomerPriority__c}" >{!a.CustomerPriority__c}</apex:outputLink>
+        </apex:column>
+      </apex:pageBlockTable>
+    </apex:pageBlock>
+  </apex:form>  
+ </apex:page>

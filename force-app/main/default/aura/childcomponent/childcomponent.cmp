@@ -1,0 +1,4 @@
+<aura:component>
+   <aura:attribute name="childAttribute" type="String"/>
+   <aura:handler name="change" value="{!v.childAttribute}" action="{!c.onChildAttributeChange}"/>
+</aura:component>

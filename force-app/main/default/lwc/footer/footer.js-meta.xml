@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>48.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Footer</masterLabel>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="maxWidth" type="Integer" label="Enter maximum width for footer" default="1200" description="The maximum width for footer"/>
+            <property name="fontColor" type="Color" default="rgba(255, 255, 255, 1)" label="Select font colour for footer" description="The font colour for footer"/>
+            <property name="firstTitle" type="String" label="Enter page name for first link" default="Legal" description="The page name for first link"/>
+            <property name="firstUrl" type="String" label="Enter URL for first link" default="https://www.simplyhealth.co.uk/about-us/legal" description="The URL for first link"/>
+            <property name="secondTitle" type="String" label="Enter page name for second link" default="Privacy" description="The page name for second link"/>
+            <property name="secondUrl" type="String" label="Enter URL for second link" default="https://www.simplyhealth.co.uk/about-us/privacy" description="The URL for second link"/>
+            <property name="thirdTitle" type="String" label="Enter page name for third link" default="FAQs" description="The page name for third link"/>
+            <property name="thirdUrl" type="String" label="Enter URL for third link" default="https://www.simplyhealth.co.uk/frequently-asked-questions" description="The URL for third link"/>
+            <property name="fourthTitle" type="String" label="Enter page name for fourth link" default="Complains Data" description="The page name for fourth link"/>
+            <property name="fourthUrl" type="String" label="Enter URL for fourth link" default="https://www.simplyhealth.co.uk/about-us/complaints-data" description="The URL for fourth link"/>
+            <property name="fifthTitle" type="String" label="Enter page name for fifth link" default="Cookies" description="The page name for fifth link"/>
+            <property name="fifthUrl" type="String" label="Enter URL for fifth link" default="https://www.simplyhealth.co.uk/about-us/cookies" description="The URL for fifth link"/>
+            <property name="sixthTitle" type="String" label="Enter page name for sixth link" default="Accessibility" description="The page name for sixth link"/>
+            <property name="sixthUrl" type="String" label="Enter URL for sixth link" default="https://www.simplyhealth.co.uk/about-us/accessibility" description="The URL for sixth link"/>
+            <property name="seventhTitle" type="String" label="Enter page name for seventh link" default="Contact Us" description="The page name for seventh link"/>
+            <property name="seventhUrl" type="String" label="Enter URL for seventh link" default="https://www.simplyhealth.co.uk/contact-us" description="The URL for seventh link"/>
+            <property name="eigthTitle" type="String" label="Enter page name for eigth link" default="Sitemap" description="The page name for eigth link"/>
+            <property name="eigthUrl" type="String" label="Enter URL for eigth link" default="https://www.simplyhealth.co.uk/sh/pages/site-map.jsp" description="The URL for eigth link"/>
+            <property name="ninthTitle" type="String" label="Enter page name for ninth link" description="The page name for ninth link"/>
+            <property name="ninthUrl" type="String" label="Enter URL for ninth link" description="The URL for ninth link"/>
+            <property name="tenthTitle" type="String" label="Enter page name for tenth link" description="The page name for tenth link"/>
+            <property name="tenthUrl" type="String" label="Enter URL for tenth link" description="The URL for tenth link"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

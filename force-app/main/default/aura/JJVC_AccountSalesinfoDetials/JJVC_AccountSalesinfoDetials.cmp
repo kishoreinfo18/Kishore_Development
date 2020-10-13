@@ -1,0 +1,10 @@
+<aura:component access="global" implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader,flexipage:availableForAllPageTypes" >
+	    <div style="padding: 1rem;">
+        <div class="slds-align_absolute-center" style="text-align: center; width: 8rem; background-color: rgb(255, 255, 255);">
+         	<div class="slds-border_top">This should have a top border. </div>
+        </div>
+    </div>
+    <div class="slds-box">
+        <p> this is kishore first lightning Box.</p>
+    </div>
+</aura:component>

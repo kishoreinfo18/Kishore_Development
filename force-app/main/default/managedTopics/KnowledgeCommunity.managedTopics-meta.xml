@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ManagedTopics xmlns="http://soap.sforce.com/2006/04/metadata">
+    <managedTopic>
+        <fullName>KnowledgeCommunity.Featured:Customer Support</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Customer Support</name>
+        <parentName/>
+        <position>0</position>
+        <topicDescription/>
+    </managedTopic>
+    <managedTopic>
+        <fullName>KnowledgeCommunity.Featured:Social Group</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Social Group</name>
+        <parentName/>
+        <position>1</position>
+        <topicDescription/>
+    </managedTopic>
+    <managedTopic>
+        <fullName>KnowledgeCommunity.Navigational:Customer Support</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Customer Support</name>
+        <parentName/>
+        <position>0</position>
+        <topicDescription/>
+    </managedTopic>
+    <managedTopic>
+        <fullName>KnowledgeCommunity.Navigational:Social Group</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Social Group</name>
+        <parentName/>
+        <position>1</position>
+        <topicDescription/>
+    </managedTopic>
+</ManagedTopics>

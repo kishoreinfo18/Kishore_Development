@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AccountName</fullName>
+    <active>false</active>
+    <description>Account name will not allow to change anyone especilly sys admin</description>
+    <errorConditionFormula>AND(ISCHANGED( Name ) , $User.Username&lt;&gt;&#39;system administrator&#39;)</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>Do not have edit access to user</errorMessage>
+</ValidationRule>

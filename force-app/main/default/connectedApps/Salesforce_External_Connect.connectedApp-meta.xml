@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>kishore.info18@gmail.com</contactEmail>
+    <label>Salesforce External Connect</label>
+    <oauthConfig>
+        <callbackUrl>https://kishoretest-dev-ed.my.salesforce.com/</callbackUrl>
+        <consumerKey>3MVG9Y6d_Btp4xp4TsQIcz0Ub7E4MjLLfqkUT4lPA97fYkSuMe.MdXFPysfdMtdRpOfkIwYwB3Tpt0RdiFyLh</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <scopes>Full</scopes>
+    </oauthConfig>
+</ConnectedApp>

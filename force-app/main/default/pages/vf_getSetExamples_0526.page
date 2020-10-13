@@ -1,0 +1,12 @@
+<apex:page controller="AuthorFirstPage">
+  <apex:form >
+      <h1> Author details are </h1>
+      <br></br>
+      <apex:outputLabel value="Enter input value" />
+      <apex:inputText value="{!aName}" >
+      </apex:inputText>
+      <apex:outputpanel id="display">
+        <apex:outputtext value="The name entered is {!aName}"/>
+    </apex:outputpanel>   
+  </apex:form>
+</apex:page>

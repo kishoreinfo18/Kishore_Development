@@ -1,0 +1,9 @@
+<apex:page controller="ScehamExample1">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!objDetails}" var="a">
+                <apex:column value="{!objDetails[a]}" />
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

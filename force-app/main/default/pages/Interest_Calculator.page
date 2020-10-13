@@ -1,0 +1,32 @@
+<apex:page controller="Interest_Calculator">
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations</h1>
+ <apex:PageMessages />
+  <apex:form >
+  <apex:PageMessages />
+      <apex:pageBlock id="interestcalc">
+          <apex:pageBlockButtons >
+              <apex:commandButton value="Calculate" action="{!Calculate}" reRender="interestcalc"/>
+              <apex:commandButton value="Reset" action="{!Reset}" reRender="interestcalc"/>
+           </apex:pageBlockButtons>
+           <apex:pageBlockSection >
+              <apex:pageBlockSectionItem >
+                  <apex:outputLabel value="Amount" />
+                  <apex:inputText value="{!Amount}" />
+              </apex:pageBlockSectionItem>
+              <apex:pageBlockSectionItem >
+                  <apex:outputLabel value="Years" />
+                  <apex:inputText value="{!Year}" />
+              </apex:pageBlockSectionItem>
+              <apex:pageBlockSectionItem >
+                  <apex:outputLabel Value="Rate" />
+                  <apex:inputText value="{!rate}" />
+              </apex:pageBlockSectionItem>
+              <apex:pageBlockSectionItem >
+                  <apex:outputLabel Value="Interest" />
+                  <apex:outputText value="{!Interest}" />
+              </apex:pageBlockSectionItem>
+          </apex:pageBlockSection>
+      </apex:pageBlock>
+  </apex:form>
+</apex:page>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Activities --></label>
+    <name>Adhoc_Activities__c</name>
+    <picklistValues>
+        <masterLabel>Doctor Dinner</masterLabel>
+        <translation><!-- Doctor Dinner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dx Replenishment</masterLabel>
+        <translation><!-- Dx Replenishment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Retail Management</masterLabel>
+        <translation><!-- Retail Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rx Replenishment</masterLabel>
+        <translation><!-- Rx Replenishment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Staff Training</masterLabel>
+        <translation><!-- Staff Training --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Staff Training-Annual Supply</masterLabel>
+        <translation><!-- Staff Training-Annual Supply --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Staff Training-Indus Knowledge</masterLabel>
+        <translation><!-- Staff Training-Indus Knowledge --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Staff Training-Other</masterLabel>
+        <translation><!-- Staff Training-Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tech Follow-up</masterLabel>
+        <translation><!-- Tech Follow-up --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,20 @@
+<apex:page standardController="Account" RecordSetVar="Acc">
+    <apex:form >
+        <apex:pageBlock >
+             <table Border="0.5">
+                 <tr>
+                      <th> Account Name  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </th>
+                      <th> Account Number &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                      <th> Fax  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                 </tr>
+                 <apex:repeat value="{!Acc}" var="a">
+                  <tr>
+                       <td>{!a.name} </td>
+                       <td>{!a.AccountNumber}</td>
+                       <td>{!a.fax} </td>
+                  </tr>
+                 </apex:repeat>
+              </table>         
+        </apex:pageBlocK>
+    </apex:form>
+</apex:page>

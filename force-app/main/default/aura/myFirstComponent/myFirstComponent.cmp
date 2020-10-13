@@ -1,0 +1,5 @@
+<aura:component >
+	<h1> THis is my First component</h1>
+    <p> This is kishore Reddy</p>
+    <p> Post by : Kishore Reddy</p>
+</aura:component>

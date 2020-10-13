@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Business Review</fullName>
+                <default>false</default>
+                <label>Business Review</label>
+            </value>
+            <value>
+                <fullName>Digital Interaction</fullName>
+                <default>false</default>
+                <label>Digital Interaction</label>
+            </value>
+            <value>
+                <fullName>Didactic Lecture</fullName>
+                <default>false</default>
+                <label>Didactic Lecture</label>
+            </value>
+            <value>
+                <fullName>Convention</fullName>
+                <default>false</default>
+                <label>Convention</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>STAPLE</fullName>
+                <default>false</default>
+                <label>STAPLE</label>
+            </value>
+            <value>
+                <fullName>Symposium</fullName>
+                <default>false</default>
+                <label>Symposium</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Promotion/Marketing</fullName>
+                <default>false</default>
+                <label>Promotion/Marketing</label>
+            </value>
+            <value>
+                <fullName>Sponsorship Event</fullName>
+                <default>false</default>
+                <label>Sponsorship Event</label>
+            </value>
+            <value>
+                <fullName>Lunch &amp; Learn (School)</fullName>
+                <default>false</default>
+                <label>Lunch &amp; Learn (School)</label>
+            </value>
+            <value>
+                <fullName>Lunch &amp; Learn (Student Club)</fullName>
+                <default>false</default>
+                <label>Lunch &amp; Learn (Student Club)</label>
+            </value>
+            <value>
+                <fullName>Faculty Meeting</fullName>
+                <default>false</default>
+                <label>Faculty Meeting</label>
+            </value>
+            <value>
+                <fullName>Event Planning</fullName>
+                <default>false</default>
+                <label>Event Planning</label>
+            </value>
+            <value>
+                <fullName>Doctor Dinner</fullName>
+                <default>false</default>
+                <label>Doctor Dinner</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

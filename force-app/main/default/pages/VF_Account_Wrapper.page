@@ -1,0 +1,27 @@
+<apex:page controller="Account_WrapperExample">
+    <apex:form >
+        <apex:pageBlock >
+        	<apex:pageBlockButtons >
+                <apex:commandButton value="Add" action="{!add}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{!accounts}" var="a">
+                <apex:column >
+                    <apex:facet name="Header"> <apex:inputCheckBox /></apex:facet>
+                    <apex:inputCheckBox value="{!a.chk}" />
+                </apex:column>
+                <apex:column headerValue="AccountName">
+                <apex:inputText value="{!a.acc.name}" />
+                </apex:column>
+                <apex:column headerValue="Industry">
+                <apex:inputText value="{!a.acc.industry}" />
+                </apex:column>
+                <apex:column headerValue="Phone">
+                <apex:inputText value="{!a.acc.phone}" />
+                </apex:column>
+                <apex:column headerValue="Rating">
+                <apex:inputText value="{!a.acc.Rating}" />
+                </apex:column>
+             </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

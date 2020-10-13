@@ -1,0 +1,16 @@
+<template>
+  <c-card-outer enable-hover="true">
+    <a href={targetUrl} onclick={handleOnClick}>
+      <div class="outer_container slds-grid slds-wrap slds-gutters">
+        <div class="image_container slds-col slds-size_1-of-1 slds-large-size_1-of-3">
+          <svg slot="icon-slot" xmlns="http://www.w3.org/2000/svg" height="80px" width="80px">
+            <use xlink:href={svgUrl}></use>
+          </svg>
+        </div>
+        <div class="text_container slds-col slds-align-middle slds-size_1-of-1 slds-large-size_2-of-3">
+          <h3 class="title slds-text-color_default">{title}</h3>
+        </div>
+      </div>
+    </a>
+  </c-card-outer>
+</template>

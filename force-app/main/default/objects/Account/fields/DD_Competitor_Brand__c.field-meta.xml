@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DD_Competitor_Brand__c</fullName>
+    <externalId>false</externalId>
+    <label>DD Competitor Brand</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Primary_DD_Competitor__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1DAM MULTIFOCAL</fullName>
+                <default>false</default>
+                <label>1DAM MULTIFOCAL</label>
+            </value>
+            <value>
+                <fullName>1-Day Acuvue Define</fullName>
+                <default>false</default>
+                <label>1-Day Acuvue Define</label>
+            </value>
+            <value>
+                <fullName>1-Day Acuvue for Astigmatism</fullName>
+                <default>false</default>
+                <label>1-Day Acuvue for Astigmatism</label>
+            </value>
+            <value>
+                <fullName>1-Day Acuvue Moist</fullName>
+                <default>false</default>
+                <label>1-Day Acuvue Moist</label>
+            </value>
+            <value>
+                <fullName>1-Day Acuvue Moist for Astig</fullName>
+                <default>false</default>
+                <label>1-Day Acuvue Moist for Astig</label>
+            </value>
+            <value>
+                <fullName>1-Day TruEye (nara A)</fullName>
+                <default>false</default>
+                <label>1-Day TruEye (nara A)</label>
+            </value>
+            <value>
+                <fullName>1-Day TruEye (nara B)</fullName>
+                <default>false</default>
+                <label>1-Day TruEye (nara B)</label>
+            </value>
+            <value>
+                <fullName>Acuvue</fullName>
+                <default>false</default>
+                <label>Acuvue</label>
+            </value>
+            <value>
+                <fullName>Acuvue Advance</fullName>
+                <default>false</default>
+                <label>Acuvue Advance</label>
+            </value>
+            <value>
+                <fullName>Acuvue Advance for Astig</fullName>
+                <default>false</default>
+                <label>Acuvue Advance for Astig</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Alcon</controllingFieldValue>
+            <valueName>1DAM MULTIFOCAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alcon</controllingFieldValue>
+            <valueName>1-Day Acuvue Define</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alcon</controllingFieldValue>
+            <valueName>1-Day Acuvue for Astigmatism</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alcon</controllingFieldValue>
+            <valueName>1-Day Acuvue Moist</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>B&amp;L</controllingFieldValue>
+            <valueName>1-Day Acuvue Moist for Astig</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>B&amp;L</controllingFieldValue>
+            <valueName>1-Day TruEye (nara A)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>B&amp;L</controllingFieldValue>
+            <valueName>1-Day TruEye (nara B)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cooper</controllingFieldValue>
+            <valueName>Acuvue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cooper</controllingFieldValue>
+            <valueName>Acuvue Advance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cooper</controllingFieldValue>
+            <valueName>Acuvue Advance for Astig</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

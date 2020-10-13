@@ -1,0 +1,9 @@
+<aura:component controller="AccountAuraController" access="global" implements="force:appHostable">
+     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <div class="slds-form-element">
+       
+            <ui:inputSelect label="Industry" class="dynamic" aura:id="InputAccountIndustry" change="{!c.onPicklistChange}"/>
+       
+    </div>
+	
+</aura:component>

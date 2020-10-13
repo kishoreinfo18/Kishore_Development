@@ -1,0 +1,23 @@
+<apex:page standardcontroller="Contact">
+  <h>Hello World </h>
+  <apex:detail relatedList="False">
+  <apex:relatedList list="Opportunities" pageSize="5"/>
+   </apex:detail>
+  
+  <apex:pageBlock title="First Block">
+      <apex:pageBlockSection title="second Block" columns="3">
+   
+      <apex:outputField value="{!Contact.FirstName}"/>
+          <apex:pageBlocksectionItem >
+      User Name is :{!$User.FirstName} 
+      
+          </apex:pageBlocksectionItem>
+          <apex:pageBlockSectionItem >
+      user Last Name is :{!$User.LastName}
+          </apex:pageBlockSectionItem>  
+          <apex:pageBlockSectionItem >
+      user Email id is :{!$User.Email}
+          </apex:pageBlockSectionItem>  
+      </apex:pageBlocksection>
+  </apex:pageBlock>
+</apex:page>

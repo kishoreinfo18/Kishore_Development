@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>Acuvue2</masterLabel>
+        <translation><!-- Acuvue2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Moist 30 or 90 pack</masterLabel>
+        <translation><!-- Moist 30 or 90 pack --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oasys 1-Day 90 pack</masterLabel>
+        <translation><!-- Oasys 1-Day 90 pack --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oasys 1-Week Overnight Use</masterLabel>
+        <translation><!-- Oasys 1-Week Overnight Use --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oasys Sphere 12-Pack</masterLabel>
+        <translation><!-- Oasys Sphere 12-Pack --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oasys Sphere 24-Pack</masterLabel>
+        <translation><!-- Oasys Sphere 24-Pack --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TruEye 30 or 90 pack</masterLabel>
+        <translation><!-- TruEye 30 or 90 pack --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vita 12-pack</masterLabel>
+        <translation><!-- Vita 12-pack --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vita 6-pack</masterLabel>
+        <translation><!-- Vita 6-pack --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

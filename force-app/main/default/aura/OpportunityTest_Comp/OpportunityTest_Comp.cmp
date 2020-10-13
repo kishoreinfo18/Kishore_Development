@@ -1,0 +1,77 @@
+<aura:component controller="AccountListCtrl" implements="flexipage:availableForAllPageTypes,force:appHostable">
+  <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+  <aura:attribute name="accounts" type="Account[]"/>
+  <aura:attribute name="accountsLength" type="String"/>
+  <aura:dependency resource="markup://force:navigateToSObject" type="EVENT"/>
+ 
+  <ltng:require styles="/resource/slds_resource/assets/styles/salesforce-lightning-design-system.css?v=1" />
+  <div class="slds">
+    <div class="slds-page-header noborderbottom" role="banner"> 
+      <div class="slds-grid">
+        <div class="slds-col slds-has-flexi-truncate">
+          <p class="slds-text-heading--label" style="padding-bottom: 4px;">Account Items</p>
+          <div class="slds-grid">
+            <div class="slds-grid slds-type-focus slds-no-space">
+              <h1 class="slds-page-header__title slds-truncate" title="My Items" style="font-family: 'Salesforce Sans',Arial,sans-serif; font-weight: 300; padding-bottom: 5px;">My Accounts</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slds-grid">
+        <div class="slds-col slds-align-bottom">
+          <p class="slds-text-body--small page-header__info">{!v.accountsLength} items</p>
+        </div>
+      </div>
+    </div>   
+  </div>       
+  <div class="slds">
+    <table class="slds-table slds-table--bordered slds-table--cell-buffer slds-max-medium-table--stacked-horizontal">
+      <thead>
+        <tr class="slds-text-heading--label">
+          <th scope="col" class="nobordertop" title="Account Name">
+            <div>Account Name</div>
+          </th>
+          <th scope="col" class="nobordertop" title="Account Number">
+            <div>Account Number</div>
+          </th>
+          <th scope="col" class="nobordertop" title="Account Site">
+            <div>Account Site</div>
+          </th>
+          <th scope="col" class="nobordertop" title="Account Source">
+            <div>Account Source</div>
+          </th>      
+          <th scope="col" class="nobordertop" title="Annual Revenue">
+            <div>Annual Revenue</div>
+          </th>
+          <th scope="col" class="nobordertop" title="Number Of Employees">
+            <div>Number Of Employees</div>
+          </th>                
+        </tr>
+      </thead>
+      <tbody>
+        <aura:iteration items="{!v.accounts}" var="account">     
+          <tr>
+            <td data-label="Name" title="Name">
+                <div><a data-record="{!account.Id}" onclick="{!c.redirectToSobject}">{!account.Name}</a></div>
+            </td>
+            <td data-label="Account Number" title="Account Number">
+              <div>{!account.AccountNumber}</div>
+            </td>
+            <td data-label="Account Site" title="Account Site">
+              <div>{!account.Site}</div>
+            </td> 
+            <td data-label="Account Source" title="Account Source">
+              <div>{!account.AccountSource}</div>
+            </td>  
+            <td data-label="Annual Revenue" title="Annual Revenue">
+              <div>{!account.AnnualRevenue}</div>
+            </td>
+            <td data-label="Number Of Employees" title="Number Of Employees">
+              <div>{!account.NumberOfEmployees}</div>
+            </td>       
+          </tr>
+        </aura:iteration>
+      </tbody>
+    </table> 
+  </div>
+</aura:component>

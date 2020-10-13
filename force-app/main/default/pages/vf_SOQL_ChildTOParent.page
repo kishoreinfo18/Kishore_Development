@@ -1,0 +1,22 @@
+<apex:page controller="cls_SOQL_ChildTOParent" >
+    <apex:form >
+        <apex:pageBlock title="Contact account information" >
+        	 <apex:pageBlockButtons >
+                 <apex:commandButton value="StandardButton" action="{!stndrdrelation}"/>
+                 <apex:commandButton value="CustomButton" action="{!customrelation}"/>
+             </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{!con}" var="c" rendered="{!flg1}">
+                <apex:column value="{!c.firstName}" />
+                <apex:column value="{!c.lastname}" />
+                <apex:column value="{!c.account.name}" />
+                <apex:column value="{!c.account.industry}" /> 
+            </apex:pageBlockTable>
+            <apex:pageBlockTable value="{!con}" var="c" rendered="{!flg2}">
+                <apex:column value="{!c.firstName}" />
+                <apex:column value="{!c.lastname}" />
+                <apex:column value="{!c.AccountName__r.name}" />
+                <apex:column value="{!c.AccountName__r.industry}" /> 
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

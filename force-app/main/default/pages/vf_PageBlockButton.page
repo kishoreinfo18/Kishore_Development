@@ -1,0 +1,19 @@
+<apex:page controller="PageBlockButtonSave" >
+  <apex:form >
+   <apex:pageBlock title="Account information">
+     <apex:pageBlockButtons location="Top">
+      <apex:commandButton value="Save" action="{!actionSaveContact}"> </apex:commandButton>
+      <apex:commandButton value="Cancel"> </apex:commandButton>
+      </apex:pageBlockButtons>
+     <apex:pageBlockSection >
+        <apex:inputText value="{!acc.name}"/> <br/> 
+        <apex:inputText value="{!acc.phone}"/> 
+       Details are:&nbsp;&nbsp; <apex:outputText value="{!StringValue}"></apex:outputText>
+       </apex:pageBlockSection>
+     <apex:pageBlockButtons location="Bottom">
+      <apex:commandButton value="Save" action="{!actionSaveContact}"> </apex:commandButton>
+      <apex:commandButton value="Cancel"> </apex:commandButton>
+      </apex:pageBlockButtons>
+   </apex:pageBlock>
+  </apex:form>
+</apex:page>

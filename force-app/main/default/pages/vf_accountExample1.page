@@ -1,0 +1,4 @@
+<apex:page controller="controll_AccountExample">
+    Name :{!name} <br/>
+    Branch :{!branch}
+</apex:page>

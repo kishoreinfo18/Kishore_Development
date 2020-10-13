@@ -1,0 +1,16 @@
+<apex:page standardController="Account" showHeader="true"
+tabStyle="account" >
+<apex:form >
+  <apex:pageBlock title="Page title is {!$User.FirstName}">
+  <apex:InputField value="{!account.name}" Label="Account Name" /> <p/>
+    <apex:commandButton action="{!save}" value="save the value" /> <p/>
+  </apex:pageBlock>
+ </apex:form>
+/*<style>
+.activeTab {background-color: #236FBD; color:white;
+background-image:none}
+.inactiveTab { background-color: lightgrey; color:black;
+background-image:none}
+</style> */
+<h1> this is the first page</h1>
+</apex:page>

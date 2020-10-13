@@ -1,0 +1,10 @@
+<apex:page controller="Screen3">
+    <apex:form >
+         <apex:pageBlock >
+             <apex:pageBlockSection >
+                  <apex:outputField value="{!account.Name}"/>
+                  <apex:outputField value="{!account.Phone}"/>
+             </apex:pageBlockSection>
+         </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,5 @@
+<aura:component >
+    <aura:attribute Name="test1" type="String" />
+   <lightning:button label="Framework Button" onclick="{!c.handleClick}"/>
+	
+</aura:component>

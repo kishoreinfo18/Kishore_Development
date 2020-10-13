@@ -1,0 +1,18 @@
+<aura:component >
+	<!--<aura:set attribute="body"></aura:set> you don't need this. v.body is implicit -->
+	<aura:attribute name="sm" type="String" default = "4-of-12"/>
+	<aura:attribute name="md" type="String" default = "4-of-12"/>
+	<aura:attribute name="lg" type="String" default = "4-of-12"/>
+	<aura:attribute name="align" type="String"/>
+	<aura:attribute name="margin" type="String"/>
+	<aura:attribute name="addClass" type="String"/>
+	<aura:attribute name="addStyle" type="String"/>
+	<aura:attribute name="padding" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<div style="{!'word-wrap: break-word;'+v.addStyle}" class="{#'slds-small-size--'+v.sm+' slds-medium-size--'+v.md+' slds-large-size--'+v.lg + ' ' + v.margin + ' ' + v.padding + ' ' + v.align+ '' + v.addClass}">
+        {test}
+        {!v.body}
+    </div>
+		
+    
+</aura:component>

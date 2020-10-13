@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customMetadataTypeRecord>AWSCognitoConsumerLink__mdt.AWS_Cognito_Consumer_Link_Dummy</customMetadataTypeRecord>
+    <executionUser>kishore.info18@gmail.com</executionUser>
+    <friendlyName>AWS Cognito Consumer Link Dummy</friendlyName>
+    <iconUrl>https://login.salesforce.com/icons/amazon-black.png</iconUrl>
+    <includeOrgIdInIdentifier>false</includeOrgIdInIdentifier>
+    <plugin>Concur</plugin>
+    <providerType>Custom</providerType>
+    <registrationHandler>AwsRegHandler</registrationHandler>
+    <sendAccessTokenInHeader>false</sendAccessTokenInHeader>
+    <sendClientCredentialsInHeader>false</sendClientCredentialsInHeader>
+    <sendSecretInApis>false</sendSecretInApis>
+</AuthProvider>

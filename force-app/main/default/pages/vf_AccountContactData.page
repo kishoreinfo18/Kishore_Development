@@ -1,0 +1,14 @@
+<apex:page Controller="accountContactInsert">
+     <apex:form >
+         <apex:pageBlock >
+              <apex:pageBlockButtons location="both" >
+                   <apex:CommandButton value="Save" action="{!InsertAcccon}"/>
+                   <apex:CommandButton value="Cancel" action="{!CancelAcccon}"/>
+               </apex:pageBlockButtons>
+                   <apex:pageBlockSection title="Account Information" >
+                          Account Name:  <apex:inputText value="{!AccName}"/>
+                          Phone :  <apex:inputText value="{!accphone}"/>
+                   </apex:pageBlockSection>
+        </apex:pageBlocK>
+     </apex:form>
+</apex:page>

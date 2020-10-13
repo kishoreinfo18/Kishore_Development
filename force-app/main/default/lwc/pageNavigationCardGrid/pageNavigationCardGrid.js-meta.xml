@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>48.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Page Navigation Card Grid</masterLabel>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="policiesTitle" type="string" default="My Policies" label="Display title for policies"/>
+            <property name="policiesApiName" type="string" default="Policies__c" label="API name for policies"/>
+            <property name="claimTitle" type="string" default="Make a claim" label="Display title for claim"/>
+            <property name="claimApiName" type="string" default="Claims__c" label="API name for claim"/>
+            <property name="referFriendTitle" type="string" default="Refer a friend" label="Display title for refer a friend"/>
+            <property name="referFriendApiName" type="string" default="Referral__c" label="API name for Refer a Friend"/>
+            <property name="personalDetailsTitle" type="string" default="Personal Details" label="Display title for personal details"/>
+            <property name="personalDetailsApiName" type="string" default="Personal_Details__c" label="API name for personal details"/>
+            <property name="claimHistoryTitle" type="string" default="My Claims" label="Display title for claims history"/>
+            <property name="claimHistoryApiName" type="string" default="Claims__c" label="API name for claims history"/>
+            <property name="helpTitle" type="string" default="Help and FAQs" label="Display title for help"/>
+            <property name="helpApiName" type="string" default="Help__c" label="API name for help"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

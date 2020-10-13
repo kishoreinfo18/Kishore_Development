@@ -1,0 +1,32 @@
+<aura:component controller="AccContactListController" implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+	<aura:attribute name="contact" type="Contact" />
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}"/>
+    <div class = "table table-boarded">
+    	<table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_striped">
+            <thead>
+                <tr>
+                    <th scope="col">
+                        <div class="slds-truncate" title="First Name" >Cont_First Name</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Last Name" >Cont_Last Name</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Email" >Cont Email</div>
+                    </th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <aura:iteration items="{!v.contact}" var="cont" >
+                    <tr>
+                        <td>{!cont.firstname}</td>
+                        <td>{!cont.lastName}</td>
+                        <td>{!cont.lastName}</td>
+                          
+                    </tr>    
+                </aura:iteration>
+			</tbody>
+        </table>
+    </div>    
+    
+</aura:component>

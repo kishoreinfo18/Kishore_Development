@@ -1,0 +1,73 @@
+<aura:component controller = "Cls_ContactWrapper_Example3">
+    <aura:attribute name="ContactDetails" type="List" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    Total Contacts count is : {!v.ContactDetails.cnt}
+    <div class="slds-grid">
+					<c:SL_GridColumn sm="1-of-3" md="1-of-1"  lg="1-of-3" padding="slds-p-bottom--xx-small">
+						<span>
+							<b>Kihsore Kumar Reddy</b>
+                        </span>
+		            </c:SL_GridColumn>
+        			<c:SL_GridColumn sm="2-of-3" md="2-of-1"  lg="2-of-3" padding="slds-p-bottom--xx-small">
+						<span>
+							Salutation
+                            <div class ="slds-form-element">
+                                <label class="slds-form-element__label" for="select-01">Select Industry</label>
+                                <div class="slds-select_container">
+                                	<ui:inputSelect label="Industry" class="dynamic" aura:id="InputAccountIndustry" change="{!c.onPicklistChange}"/>
+                                </div>
+                                
+                            </div>
+                        </span>
+		            </c:SL_GridColumn>
+	            </div>
+    
+    	
+    
+	<table class = "slds-table slds-table--bordered slds-table--fixed-layout slds-box slds-max-medium-table--stacked-horizontal slds-table_edit" role="grid">
+    	<thead>
+            <c:HelloworldTest></c:HelloworldTest>
+            <tr class="slds-line-height--reset">
+                <th class="slds-is-resizable slds-text-title--caps" scope="col">
+                    <div class="slds-truncate" title="Name">Name</div>
+                </th>
+                <th class="slds-is-resizable slds-text-title--caps" scope="col">
+                    <div class="slds-truncate" title="Phone">Phone</div>
+                </th>
+                <th class="slds-is-resizable slds-text-title--caps" scope="col">
+                    <div class="slds-truncate" title="Title">Title</div>
+                </th>
+                <th class="slds-is-resizable slds-text-title--caps" scope="col">
+                    <div class="slds-truncate" title="Email">Email</div>
+                </th>
+                <lightning:recordEditForm objectApiName="Contact">
+       <div style="display:none">
+          <lightning:inputField fieldName="Name"/>
+        </div>
+        <lightning:inputField fieldName="Salutation"/>
+        <lightning:inputField fieldName="FirstName"/>
+        <lightning:inputField fieldName="LastName"/>
+</lightning:recordEditForm>
+            </tr>
+        </thead>
+        <tbody>
+            <a target="_blank" href="{!$Label.c.Offer_Details}"> google</a>
+            <aura:iteration items="{!v.ContactDetails}" var="contdetails">
+               	<tr>
+                    <th scope="col" class="slds-cell-wrap" role="gridcell">
+                        {!contdetails.cont.Name}
+                    </th>
+                    <th scope="col" class="slds-cell-wrap" role="gridcell">
+                        {!contdetails.cont.Phone}
+                    </th>
+                    <th scope="col" class="slds-cell-wrap" role="gridcell">
+                        {!contdetails.cont.Title}
+                    </th>
+                    <th scope="col" class="slds-cell-wrap" role="gridcell">
+                        {!contdetails.cont.Email}
+                    </th>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>            
+</aura:component>

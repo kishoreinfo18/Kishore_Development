@@ -1,0 +1,64 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global">
+  <aura:attribute name="objPlural" default="Accounts" type="String" description="Plural object name" />
+  <aura:attribute name="objSingle" default="" type="String" description="Single object name" />
+  <aura:attribute name="objAPIName" default="" type="String" description="API Name of Object" />
+  <aura:attribute name="lkupElId" default="lookatme" type="String" description="Lookup element Id" />
+  <aura:attribute name="inputLbl" default="" type="String" description="Label Name" />
+  <aura:attribute name="iconPath" default="standard-sprite/svg/symbols.svg#account" type="String" description="Label Name" />
+  <aura:attribute name="custPlac" default="" type="String" description="Custom Placeholder Text" />
+  <aura:attribute name="srchVal" default="" type="String" description="Value being searched" />
+  <aura:attribute name="initVal" default="" type="String" description="Value populated in search box" />
+  <aura:attribute name="srchList" default="" type="Object[]" description="List of values returned from search" />
+  <aura:attribute name="selVal" type="Object" description="Selected object from Dropdown" />
+  <aura:attribute name="focVar" type="Boolean" default="false" description="Has focus" />
+  <aura:attribute name="isDisabled" type="Boolean" default="false" description="if the input should be disabled or not" />
+  <aura:attribute name="addButton" type="Aura.Component[]"/>
+  <aura:attribute name="defaultLoad" type="Boolean" default="false" description="Default Load" />
+	<aura:attribute name="isPhysician" type="Boolean" default="false" ></aura:attribute>
+ 
+  <aura:attribute name="onInpt"
+                  type="Aura.Action"
+                  default="{!c.myAction}"
+                  description=""/>
+
+  <aura:attribute name="blurFunc"
+                  type="Aura.Action"
+                  default="{!c.blurFunc}"
+                  description=""/>
+
+  <aura:attribute name="focusFunc"
+                  type="Aura.Action"
+                  default="{!c.focusFunc}"
+                  description=""/>
+
+  <aura:attribute name="onItemClk"
+                  type="Aura.Action"
+                  default="{!c.myClick}"
+                  description=""/>
+
+  <aura:attribute name="clearVal"
+                  type="Aura.Action"
+                  default="{!c.clearSel}"
+                  description=""/>
+    <div class="slds-input-has-icon slds-input-has-icon--right">
+              <c:svgIcon svgPath="{!$Resource.lightningIcons+'/utility-sprite/svg/symbols.svg#search'}"
+                         class="slds-input__icon">
+              </c:svgIcon>
+ 					<input id="{!v.lkupElId}"
+                     class="slds-lookup__search-input slds-input"
+                     type="search"
+                   	 placeholder="{!v.custPlac!=''?v.custPlac:$Label.c.SL_Label_Search+' '+v.objSingle}"
+                     aria-owns="{!v.lkupElId}"
+                     role="combobox"
+                     aria-activedescendent=""
+                     aria-expanded="false"
+                     aria-autocomplete="list"
+                     oninput="{!v.onInpt}"
+                     onblur="{!v.blurFunc}"
+                     onfocus="{!v.focusFunc}"
+                     value="{!v.initVal}"
+                     disabled="{!v.isDisabled}" >
+                       {!v.initVal}
+                     </input>
+    </div>
+</aura:component>

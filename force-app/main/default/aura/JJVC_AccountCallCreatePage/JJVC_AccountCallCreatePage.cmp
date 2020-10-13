@@ -1,0 +1,46 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,flexipage:availableForAllPageTypes"  > 
+    <div class="slds-theme_shade" style="margin:1.0rem">
+          <div class="slds-theme_shade">
+    <table class="slds-table slds-table_bordered slds-max-medium-table_stacked-horizontal">
+        <thead>
+  
+            <lightning:layout class="slds-page-header slds-page-header--object-home">
+    			<lightning:layoutItem padding="horizontal-small">
+                    <div class="slds-text-body_regular">
+                        <div class="page-section page-header">
+                             <div class="slds-text-heading" style="fontWeightBold">
+                                 <div class="slds-size_1-of-2" font="size:20px;">  <span class="slds-truncate"  ><b>Create/Edit Account Calls</b></span> </div>
+                            </div>
+                        </div>
+                    </div>  
+    			</lightning:layoutItem> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <lightning:layoutItem padding="horizontal-Center">
+                	<div class="slds-align_absolute-center">
+                        <lightning:button label="Save" variant="neutral" class="slds-button--neutral" />
+                        <lightning:button label="Submit" variant="neutral" class="slds-button--neutral" />
+                        <lightning:button label="Cancel" variant="neutral" class="slds-button--neutral" />
+                    </div>
+                </lightning:layoutItem>
+            </lightning:layout>
+            
+        	<lightning:layout class="slds-page-header slds-page-header--object-home">
+            	<lightning:layoutItem padding="horizontal-small">
+                	<div class="slds-align_absolute-left" style="fontWeightBold"> <b>Account Call Information</b> </div>
+                </lightning:layoutItem>
+            </lightning:layout>
+           
+			<lightning:layout class="slds-page-header slds-page-header--object-home">
+                <div class="slds-align_absolute-center">
+            			<lightning:button label="Save" variant="neutral" class="slds-button--neutral" />
+                        <lightning:button label="Submit" variant="neutral" class="slds-button--neutral" />
+                        <lightning:button label="Cancel" variant="neutral" class="slds-button--neutral" />
+                </div>
+                </lightning:layout>	
+            
+      </thead>
+    </table>
+          </div>
+    </div>
+</aura:component>

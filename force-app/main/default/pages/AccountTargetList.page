@@ -1,0 +1,16 @@
+<apex:page controller="AccountTargetListCntrlr" standardStylesheets="true" Sidebar="false" title="Target list" cache="false">
+    <apex:form id="form">
+        <apex:pageBlock title="Target List"> 
+            <apex:pageBlockButtons location="Top">
+                <apex:commandButton Value="New Target List" />
+                <apex:commandButton value="Search target list" />
+                <apex:commandButton value="target list report" />
+            </apex:pageBlockButtons>
+            <b> Selected target list View &nbsp;&nbsp; </b>
+           <apex:selectList value="{!getSelectedvalue}" size="1" id="selectView" multiselect="false">
+                <apex:selectOptions value="{!TLViewList}" />                
+            </apex:selectList> 
+        </apex:pageBlock>
+     
+    </apex:form>
+ </apex:page>

@@ -1,0 +1,7 @@
+<aura:component >
+	<div class="slds" style="margin-top:10px;margin-left:10px;">
+        <span class="slds-avatar slds-avatar_x-small">
+ 		<button class="slds-button slds-button_brand" onclick="{!c.RefundsComponent}"> Next</button>
+        </span>
+    </div>
+</aura:component>

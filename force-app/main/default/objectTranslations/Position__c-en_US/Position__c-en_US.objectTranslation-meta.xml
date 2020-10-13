@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Position</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Positions</value>
+    </caseValues>
+    <layouts>
+        <layout>IT Position Layout</layout>
+        <sections>
+            <label><!-- Compensation --></label>
+            <section>Compensation</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- Skills Information --></label>
+            <section>Skills Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Position Layout</layout>
+        <sections>
+            <label><!-- Compensation --></label>
+            <section>Compensation</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Record type for all IT positions --></description>
+        <label><!-- IT Positions --></label>
+        <name>IT_Positions</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record type for all non-IT positions. --></description>
+        <label><!-- Standard Position --></label>
+        <name>Standard_Position</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Close Date must be specified when
+Status is set to &apos;Closed.&apos; --></errorMessage>
+        <name>Close_date_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Min Pay cannot exceed Max Pay. --></errorMessage>
+        <name>Min_Pay_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Given the salaries are the not meet the company standards --></errorMessage>
+        <name>Minimum_Pay_Rule2</name>
+    </validationRules>
+</CustomObjectTranslation>

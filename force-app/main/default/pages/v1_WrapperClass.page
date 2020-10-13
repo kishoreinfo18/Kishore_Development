@@ -1,0 +1,26 @@
+<apex:page controller="Checkbox_Class">
+   <apex:form >
+       <apex:pageBlock title="Account Table">
+           <apex:pageBlockButtons >
+           <apex:commandButton value="Display the selected Records" action="{!getSelected}" rerender="SelectAccnts"/>
+           </apex:pageBlockButtons>
+           <pageBlockSection>
+           <apex:pageblockSection title="List of Available Accounts" columns="2">
+               <apex:pageBlocktable value="{!Accounts}" var="a">
+                   <apex:column HeaderValue="Select" width="60">
+                   <apex:inputCheckBox value="{!a.selected}" id="checkdone"/>
+                   </apex:column>
+                   <apex:column HeaderValue="Account name" value="{!a.acc.name}" width="200" />
+                   <apex:column HeaderValue="Account phone" value="{!a.acc.phone}" width="300" />
+               </apex:pageBlocktable>           
+           </apex:pageblockSection> 
+           <apex:pageBlockSection title="Selected Account" id="SelectAccnts">
+               <apex:pageBlocktable value="{!SelectedAccounts}" var="s">
+                   <apex:column headervalue="AccountName" value="{!s.name}" width="30"/>
+                   <apex:column headerValue="accountPhone" value="{!s.Phone}" width="60"/>  
+               </apex:pageBlocktable>
+           </apex:pageBlockSection>
+           </pageBlockSection>           
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

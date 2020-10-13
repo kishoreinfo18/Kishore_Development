@@ -1,0 +1,19 @@
+<aura:component >
+    <aura:attribute name="selectedId" type="String" access="public" default="noting"/>
+    
+    <aura:If isTrue="{!v.selectedId == 'noting'}">
+    	<div aura:id="cmpBody">
+            <ui:button aura:id="cmpBody" press="{!c.getCompnent}" label="Next" />           
+            {Kihsore Reddy Test account}
+        </div>
+    
+   <aura:set attribute="else">
+    
+    <div aura:id="noting">
+        <ui:button aura:id="noting" press="{!c.BackCompnent}" Label="Back" />              
+            {Kihsore Kumar Reddy nottingham}
+        </div>
+        </aura:set>
+    </aura:If>
+	
+</aura:component>

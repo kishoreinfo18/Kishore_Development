@@ -1,0 +1,16 @@
+<apex:page controller="NewCtrlMultPEFImport">
+    <apex:form >
+        <apex:pagemessages />
+            <apex:pageBlock title="Import File" >
+                To import a file with multiple reports, please follow these intructions:<br/>
+                <br/>
+                Step 1 : Select a csv file<br/>
+                Step 2 : Check file content<br/>
+                Step 3 : Import valid reports<br/>
+                <apex:inputFile value="{!csvFileBody}" filename="{!csvAsString}" id="S1"/>
+                <apex:commandButton value="Check File content" id="S2"/>
+                <apex:commandButton value="Import valid reports" id="S3"/>
+            </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

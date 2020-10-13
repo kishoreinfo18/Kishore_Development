@@ -1,0 +1,20 @@
+<template>
+    <lightning-card  title="Account Details" icon-name="standard:Account">
+        <lightning-layout-item>
+            <lightning-input type="search" label="Account Name" value={searchKey} onchange={accountInputValue}></lightning-input>
+        </lightning-layout-item>   
+    </lightning-card>
+    <lightning-layout-item>
+        <template if:true = {accountName.data}>
+            <template for:each={accountName.data} for:item="accounts">
+                <lightning-layout-item key={accounts.key}>
+                    <p>{accounts.Name}</p>
+                </lightning-layout-item>
+            </template>
+        </template>
+     <lightning-button variant="brand" label="Search Account" title="Search Account" onclick={handleSearchAccount} class="slds-m-left_x-small"></lightning-button>
+    </lightning-layout-item> 
+    <div class="slds-grid slds-var-p-around_x-large">
+        <lightning-button variant="brand" label="Log in" title="Primary action" onclick={handleClick} class="slds-var-m-left_x-small"></lightning-button>
+    </div>
+</template>

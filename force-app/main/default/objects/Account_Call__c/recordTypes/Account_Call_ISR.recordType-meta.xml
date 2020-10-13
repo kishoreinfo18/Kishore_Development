@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Call_ISR</fullName>
+    <active>true</active>
+    <description>Record Type to be used for all ISR Users</description>
+    <label>Account Call ISR</label>
+    <picklistValues>
+        <picklist>Adhoc_Activities_CN__c</picklist>
+        <values>
+            <fullName>Doctor Dinner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dx Replenishment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rx Replenishment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staff Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staff Training-Annual Supply</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staff Training-Indus Knowledge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staff Training-Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tech Follow-up</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Adhoc_Activities__c</picklist>
+        <values>
+            <fullName>Doctor Dinner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dx Replenishment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rx Replenishment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staff Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staff Training-Annual Supply</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staff Training-Indus Knowledge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staff Training-Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tech Follow-up</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Call_Type__c</picklist>
+        <values>
+            <fullName>Office Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presentation %26 Office Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presentation Only</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Duration_Minutes__c</picklist>
+        <values>
+            <fullName>105</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>120</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>45</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>75</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>90</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Attempted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unscheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>open</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Status__c</picklist>
+        <values>
+            <fullName>Completed Inbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed Outbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Left Voicemail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Talked to Receptionist</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

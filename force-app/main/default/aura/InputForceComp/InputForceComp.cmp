@@ -1,0 +1,8 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="GLOBAL"> 
+<aura:attribute name="contact" type="Contact" default="{ 'sobjectType' : 'Contact' }" /> 
+<div > 
+<label >Contact</label> 
+<force:inputField aura:id="contact1" value="{!v.contact.FirstName}"/> 
+<force:inputField aura:id="contact2" value="{!v.contact.FirstName}"/> 
+</div>  
+</aura:component>

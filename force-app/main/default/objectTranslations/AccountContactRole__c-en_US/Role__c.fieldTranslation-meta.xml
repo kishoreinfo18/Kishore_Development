@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Role --></label>
+    <name>Role__c</name>
+    <picklistValues>
+        <masterLabel>Approver</masterLabel>
+        <translation><!-- Approver --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Decision Maker</masterLabel>
+        <translation><!-- Decision Maker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Evaluator</masterLabel>
+        <translation><!-- Evaluator --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Evaluator and Approver</masterLabel>
+        <translation><!-- Evaluator and Approver --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Evaluator and Decision Maker</masterLabel>
+        <translation><!-- Evaluator and Decision Maker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unknown</masterLabel>
+        <translation><!-- Unknown --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User</masterLabel>
+        <translation><!-- User --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User and Evaluator</masterLabel>
+        <translation><!-- User and Evaluator --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>user and Decision Maker</masterLabel>
+        <translation><!-- user and Decision Maker --></translation>
+    </picklistValues>
+</CustomFieldTranslation>
