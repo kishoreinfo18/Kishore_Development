@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customApplications>
+        <label><!-- Recruiter App --></label>
+        <name>Recruiter_App</name>
+    </customApplications>
+    <customLabels>
+        <label><!-- AdminId --></label>
+        <name>AdminId</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Offer Details --></label>
+        <name>Offer_Details</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SL_Label_Search --></label>
+        <name>SL_Label_Search</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- createdByDate --></label>
+        <name>createdByDate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- An error in the query --></label>
+        <name>l_lookup__An_error_in_the_query</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Complete this field --></label>
+        <name>l_lookup__Complete_this_field</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Object on you does not have permissions --></label>
+        <name>l_lookup__Invalid_Object_on_you_does_not_have_permissions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No results --></label>
+        <name>l_lookup__No_results</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SObject type is not defined --></label>
+        <name>l_lookup__SObject_type_is_not_defined</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Search placeholder formula --></label>
+        <name>l_lookup__Search_placeholder_formula</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- The Id is invalid or does not match criteria --></label>
+        <name>l_lookup__The_Id_is_invalid_or_does_not_match_criteria</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- The additional field is invalid --></label>
+        <name>l_lookup__The_additional_field_is_invalid</name>
+    </customLabels>
+    <customTabs>
+        <label><!-- AccountCallsPage --></label>
+        <name>AccountCallsPage</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Account Incident LWC --></label>
+        <name>Account_Incident_LWC</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- App Filtered View --></label>
+        <name>App_Filtered_View</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Chatter_page --></label>
+        <name>Chatter_page</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Field Sales App --></label>
+        <name>Field_Sales_App</name>
+    </customTabs>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Closed_won_Opportunity</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ContactFromAccountProcess</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Update_Asset_description</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Update_Contact_mailing</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <name>Account</name>
+                </fields>
+                <fields>
+                    <name>Close_Date</name>
+                </fields>
+                <fields>
+                    <name>Oppty_Identifier</name>
+                </fields>
+                <name>Oppty_Screen</name>
+            </screens>
+            <textTemplates>
+                <name>opptyName</name>
+            </textTemplates>
+        </flows>
+        <fullName>New_Oppty</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>create_child_case_for_breakdown</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <name>Email</name>
+                </fields>
+                <fields>
+                    <name>FirstName</name>
+                </fields>
+                <fields>
+                    <name>LastName</name>
+                </fields>
+                <name>Create_Contact</name>
+            </screens>
+        </flows>
+        <fullName>Create_Contact</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <name>Account_Name</name>
+                </fields>
+                <fields>
+                    <name>Phone</name>
+                </fields>
+                <name>New_Account</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>accountFiles</name>
+                </fields>
+                <name>Upload_Files</name>
+            </screens>
+        </flows>
+        <fullName>Quick_Account</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <name>Account</name>
+                </fields>
+                <fields>
+                    <name>ContactName</name>
+                </fields>
+                <fields>
+                    <name>update_toggle</name>
+                </fields>
+                <name>Contact_Info</name>
+            </screens>
+        </flows>
+        <fullName>New_Contact</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>CreateContactFromAccount</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>IndividualCreationBasedOnLead</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <name>Upload_File</name>
+                </fields>
+                <name>Component_Screen</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>Company_Name</name>
+                </fields>
+                <fields>
+                    <name>Last_Name</name>
+                </fields>
+                <name>Lead_Screen</name>
+            </screens>
+        </flows>
+        <fullName>New_Lead</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Sync_contact_Address</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Notifications</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>CreateContactFromAccountusingFlow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Contactfromaccountusingprocess</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Update_Records</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Opportunity_Management</fullName>
+    </flowDefinitions>
+    <quickActions>
+        <label><!-- Guest Community Case --></label>
+        <name>GuestCommunityCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Community Case --></label>
+        <name>NewCommunityCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewContact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewEvent --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewNote --></label>
+        <name>NewNote</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewOpportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewTask --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <reportTypes>
+        <description><!-- Screen Flows --></description>
+        <label><!-- Screen Flows --></label>
+        <name>screen_flows_prebuilt_crt</name>
+        <sections>
+            <label><!-- Flow Interview Log Entries --></label>
+            <name>Flow Interview Log Entries</name>
+        </sections>
+        <sections>
+            <label><!-- Flow Interview Logs --></label>
+            <name>Flow Interview Logs</name>
+        </sections>
+    </reportTypes>
+</Translations>
