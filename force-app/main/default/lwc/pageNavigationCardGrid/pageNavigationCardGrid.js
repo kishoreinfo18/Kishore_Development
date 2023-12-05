@@ -23,4 +23,5 @@ export default class PageNavigationCardGrid extends LightningElement {
     claimsSvgUrl = SSP_RESOURCES + '/images/receipt.svg#Page-1';
     helpSvgUrl = SSP_RESOURCES + '/images/information_book.svg#Page-1';
 
+
 }

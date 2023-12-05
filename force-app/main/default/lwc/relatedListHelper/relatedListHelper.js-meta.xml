@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>50.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__HomePage,lightning__RecordPage">
+            <property name="title" type="String" default="Enter the title" label="Title" description="Enter title of components"/>
+            <property name="objectlookupField" label="Relationship" type="String" datasource="apex://ReferenceFieldPickList" description="Select object and relationship field. Object and relation field are seperated by :(Colon)"/>
+            <property name="objectFields" type="String" label="Field Names" description="Enter field API names separted by comma displaying in UI data table"/>
+            <property name="maxRecords" type="Integer" min="0" max="200" label="How many records" description="How many records should we display (maximum of 200)" default="200"/>
+            <property name="filter1fieldName" type="String" label="Enter the first field api name filtered" description="Enter field API for filtering records"/>
+            <property name="firstOperatorType" type="String" label="Select the operator" datasource="Select operator,Equals,Not equal to,Contains,Does not contain,Less than,Greater than,Less or equal,Greater or equal,Includes,Excludes"
+            description="Contains and Does not contain operator should not be used for number instead use Includes/Excludes operator. Contains/Does not contain operator valid only for characters it works LIKE operator(% is must). For filtering with ownerId, the user input  value should be $UserId then it will take Id of the user as a input" default="Select operator"/>
+            <property name="Filter1Value" type="String" label="Enter the first field value" description="Enter values  or percentile(%) separated by comma for filtering records.Date value is in YYYY-MM-DD format.For filtering with ownerId, the user input  value should be $UserId then it will take Id of the user as a input"/>
+            <property name="firstfilterOperator" type="String" label="Select the filter operator" datasource="AND,OR"
+            description="Select AND or OR for filtering records based on first and second filters.It works like 1 AND (2 OR 3) : firstfield and (secondfield or third field), 1 AND 2 AND 3 : firstfield and secondfield and thirfield, (1 OR 2) AND 3 : (firstfield OR secondField) and thirdfield,
+            1 AND 2 : firstfield and secondfield,1 OR 2 : firstfield OR secondfield" default="AND"/>
+            <property name="filter2fieldName" type="String" label="Enter the second field api name filtered" description="Enter field API for filtering records"/>
+            <property name="secondOperatorType" type="String" label="Select the operator" datasource="Select operator,Equals,Not equal to,Contains,Does not contain,Less than,Greater than,Less or equal,Greater or equal,Includes,Excludes"
+            description="Contains and Does not contain operator should not be used for number instead use Includes/Excludes operator.Contains/Does not contain operator valid only for characters it works LIKE operator(% is must). For filtering with ownerId, the user input  value should be $UserId then it will take Id of the user as a input" default="Select operator"/>
+            <property name="filter2Value" type="String" label="Enter the second field value" description="Enter field values or percentile(%) separated  by comma for filtering records.Date value is in YYYY-MM-DD format. For filtering with ownerId, the user input  value should be $UserId then it will take Id of the user as a input"/>
+            <property name="secondfilterOperator" type="String" label="Select the filter operator" datasource="AND,OR"
+            description="Select AND or OR for filtering records based on first and second filters,it works like 1 AND (2 OR 3) : firstfield and (secondfield or third field), 1 AND 2 AND 3 : firstfield and secondfield and thirfield, (1 OR 2) AND 3 : (firstfield OR secondField) and thirdfield,
+            1 AND 2 : firstfield and secondfield,1 OR 2 : firstfield OR secondfield" default="AND"/>
+            <property name="filter3fieldName" type="String" label="Enter the third field api name filtered" description="Enter field API for filtering records"/>
+            <property name="thirdOperatorType" type="String" label="Select the operator" datasource="Select operator,Equals,Not equal to,Contains,Does not contain,Less than,Greater than,Less or equal,Greater or equal,Includes,Excludes"
+            description="Contains and Does not contain operator should not be used for number instead use Includes/Excludes operator.Contains/Does not contain operator valid only for characters it works LIKE operator(% is must)." default="Select operator"/>
+            <property name="filter3Value" type="String" label="Enter the third field value" description="Enter field values  or percentile(%) separated by comma for filtering records. Date value is in YYYY-MM-DD format.For filtering with ownerId, the user input  value should be $UserId then it will take Id of the user as a input"/>
+            <property name="sortFieldName" type="String" label="Enter the sort field name" description="Enter field API name for sort"/>
+            <property name="sortOperator" type="String" label="Sort by" datasource="ASC,DESC" description="select order type" default="ASC"/>
+            <property name="hideOrUnhideNew" type="String" label="Hide New" datasource="Hide,Default" description="new button Hide or default behaviour" default="Default"/>
+            <property name="hideOrUnhideDelete" type="String" label="Hide Delete" datasource="Hide,Default" description="old button Hide or default behaviour" default="Default"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

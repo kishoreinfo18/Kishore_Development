@@ -1,0 +1,27 @@
+<template>
+    <template if:true={isRequestType}>
+        <lightning-quick-action-panel header="Request Type">
+            <lightning-combobox
+                name="RequestType"
+                label="What kind of request would you like to submit?"
+                value={requestTypeValue}
+                placeholder="Type of Request"
+                options={requestType}
+                onchange={handleChange} >
+            </lightning-combobox>
+            <div slot="footer">
+                <lightning-button
+                    variant="neutral"
+                    label="Continue"
+                    onclick={handleContinue}
+                ></lightning-button>
+                <c-cancel-button button-text={cancelButtonName} class="slds-m-left_x-small"></c-cancel-button>
+            </div>
+        </lightning-quick-action-panel>
+    </template>
+
+    <template if:true={isrequestDetails}>
+        <c-request-type-page2 onnavigatetorequesttype={navigateToRequestTypeHandler} request-type-value={requestTypeValue} parent-record-id={recordId}></c-request-type-page2>
+    </template>
+
+</template>

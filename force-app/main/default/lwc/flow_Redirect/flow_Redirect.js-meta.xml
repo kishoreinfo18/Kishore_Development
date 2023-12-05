@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+	<apiVersion>57.0</apiVersion>
+	<isExposed>true</isExposed>
+	<masterLabel>Screen Flow redirect</masterLabel>
+	<targets>
+		<target>lightning__FlowScreen</target>
+		<target>lightning__RecordAction</target>
+        <target>lightning__RecordPage</target>
+		<target>lightning__Tab</target>
+	</targets>
+	<targetConfigs>
+		
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="recordId" type="String" label="Record ID" required="false" role="inputOnly"
+			description = "Id of the record to redirect to"/>
+			<property name="ScreenType" type="String" label="Type" required="false" role="inputOnly"
+			description="Specify the type of redirect, if you are using the console view this will adapt to a console behaviour. Enter 'New' for a new tab,'Sub' for console sub tab in the current parent tab.'Existing' to repalce the current tab."/>
+            <!--
+			<property name="url" type="String" label="URL" required="false" role="inputOnly"/>
+			-->
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

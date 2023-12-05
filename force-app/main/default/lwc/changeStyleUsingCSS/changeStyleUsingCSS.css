@@ -1,0 +1,9 @@
+.contentClass {
+    color: Blue;
+    font-weight: bold;
+}
+
+.messageClass {
+    border-top: 4px solid #ccc;
+    width: 100%;
+}

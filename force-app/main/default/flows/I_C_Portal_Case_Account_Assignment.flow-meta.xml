@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Portal Case Creation Acknowledgement</description>
+        <name>Portal_Case_Creation_Acknowledgement_0</name>
+        <label>Portal Case Creation Acknowledgement</label>
+        <locationX>1370</locationX>
+        <locationY>575</locationY>
+        <actionName>Case.Portal_Case_Creation_Acknowledgement</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Case.Portal_Case_Creation_Acknowledgement</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <description>Portal Case Registration Acknowledgement</description>
+        <name>Portal_Case_Registration_Acknowledgement</name>
+        <label>Portal Case Registration Acknowledgement</label>
+        <locationX>578</locationX>
+        <locationY>1151</locationY>
+        <actionName>Case.Portal_Case_Registration_Acknowledgement</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Case.Portal_Case_Registration_Acknowledgement</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>55.0</apiVersion>
+    <decisions>
+        <description>It will check Case Region</description>
+        <name>Check_Case_Region</name>
+        <label>Check Case Region</label>
+        <locationX>578</locationX>
+        <locationY>695</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Central</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Case_Account_Details.Region__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Central</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_the_queue_for_central</targetReference>
+            </connector>
+            <label>Central</label>
+        </rules>
+        <rules>
+            <name>North</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Case_Account_Details.Region__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>North</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_the_queue_for_north</targetReference>
+            </connector>
+            <label>North</label>
+        </rules>
+        <rules>
+            <name>South_East</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Case_Account_Details.Region__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>South East</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_the_queue_for_south_east</targetReference>
+            </connector>
+            <label>South East</label>
+        </rules>
+        <rules>
+            <name>South_West</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Case_Account_Details.Region__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>South West</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_the_queue_for_south_west</targetReference>
+            </connector>
+            <label>South West</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>It will check the User Details</description>
+        <name>Check_the_User_Details</name>
+        <label>Check the User Details</label>
+        <locationX>1106</locationX>
+        <locationY>455</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Guest_User</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Portal Registration</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Sub_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>New User</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>New</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>I_C_Portal</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Account_Name_Web_Email</targetReference>
+            </connector>
+            <label>Guest User</label>
+        </rules>
+        <rules>
+            <name>Portal_Cases</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Type</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Portal Registration</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Origin</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Portal</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Portal_Case_Creation_Acknowledgement_0</targetReference>
+            </connector>
+            <label>Portal Cases</label>
+        </rules>
+    </decisions>
+    <description>I&amp;C - Portal Case Account Assignment</description>
+    <environments>Default</environments>
+    <interviewLabel>I&amp;C - Portal Case Account Assignment {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>I&amp;C - Portal Case Account Assignment</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>It is to get Case Account Details</description>
+        <name>Get_Case_Account_Details</name>
+        <label>Get Case Account Details</label>
+        <locationX>1106</locationX>
+        <locationY>335</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_the_User_Details</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Account_Number__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Account_Number__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>It is to get the queue for central</description>
+        <name>Get_the_queue_for_central</name>
+        <label>Get the queue for central</label>
+        <locationX>50</locationX>
+        <locationY>815</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_owner_for_central</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>I_C_Portal_Registration_Central_Queue</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>It is to get the queue for north</description>
+        <name>Get_the_queue_for_north</name>
+        <label>Get the queue for north</label>
+        <locationX>314</locationX>
+        <locationY>815</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_owner_for_north</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>I_C_Portal_Registration_North_Queue</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>It is to get the queue for south east</description>
+        <name>Get_the_queue_for_south_east</name>
+        <label>Get the queue for south east</label>
+        <locationX>578</locationX>
+        <locationY>815</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_owner_for_south_east</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>I_C_Portal_Registration_South_East_Queue</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>It is to get the queue for south west</description>
+        <name>Get_the_queue_for_south_west</name>
+        <label>Get the queue for south west</label>
+        <locationX>842</locationX>
+        <locationY>815</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_owner_for_south_west</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>I_C_Portal_Registration_South_West_Queue</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>It is to update the Account name and web email</description>
+        <name>Update_Account_Name_Web_Email</name>
+        <label>Update Account Name &amp; Web Email</label>
+        <locationX>578</locationX>
+        <locationY>575</locationY>
+        <connector>
+            <targetReference>Check_Case_Region</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>AccountId</field>
+            <value>
+                <elementReference>Get_Case_Account_Details.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SuppliedEmail</field>
+            <value>
+                <elementReference>$Record.Email__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>It is to update owner for  central</description>
+        <name>Update_owner_for_central</name>
+        <label>Update owner for  central</label>
+        <locationX>50</locationX>
+        <locationY>935</locationY>
+        <connector>
+            <targetReference>Portal_Case_Registration_Acknowledgement</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>Get_the_queue_for_central.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>It is to update owner for  north</description>
+        <name>Update_owner_for_north</name>
+        <label>Update owner for  north</label>
+        <locationX>314</locationX>
+        <locationY>935</locationY>
+        <connector>
+            <targetReference>Portal_Case_Registration_Acknowledgement</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>Get_the_queue_for_north.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>It is to update owner for south east</description>
+        <name>Update_owner_for_south_east</name>
+        <label>Update owner for  south east</label>
+        <locationX>578</locationX>
+        <locationY>935</locationY>
+        <connector>
+            <targetReference>Portal_Case_Registration_Acknowledgement</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>Get_the_queue_for_south_east.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>It is to update owner for south west</description>
+        <name>Update_owner_for_south_west</name>
+        <label>Update owner for south west</label>
+        <locationX>842</locationX>
+        <locationY>935</locationY>
+        <connector>
+            <targetReference>Portal_Case_Registration_Acknowledgement</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>Get_the_queue_for_south_west.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>980</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Case_Account_Details</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Origin</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Portal</stringValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

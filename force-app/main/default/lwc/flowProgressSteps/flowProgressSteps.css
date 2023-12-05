@@ -1,0 +1,64 @@
+/* for loop */
+
+lightning-progress-step.slds-path__item.slds-is-current {
+    background-color: #E20177;
+}
+
+lightning-progress-step.slds-path__item.slds-is-current[c-flowProgressBar_flowProgressBar]::before,
+lightning-progress-step.slds-path__item.slds-is-current[c-flowProgressBar_flowProgressBar]::after {
+    background-color: #E20177;
+}
+
+lightning-progress-step.slds-path__item.slds-is-current[c-flowProgressBar_flowProgressBar]::before,
+lightning-progress-step.slds-path__item.slds-is-current[c-flowProgressBar_flowProgressBar]::after {
+    background-color: #E20177;
+}
+
+lightning-progress-step.slds-path__item.slds-is-complete {
+    background-color: #91014C;
+}
+
+lightning-progress-step.slds-path__item.slds-is-complete.slds-is-active {
+    background-color: #91014C;
+}
+
+lightning-progress-step.slds-path__item.slds-is-complete.slds-is-active::before,
+lightning-progress-step.slds-path__item.slds-is-complete.slds-is-active::after {
+    background-color: #91014C;
+}
+
+lightning-progress-step.slds-path__item.slds-is-complete::before,
+lightning-progress-step.slds-path__item.slds-is-complete::after {
+    background-color: #91014C;
+}
+
+lightning-progress-step.slds-path__item.slds-is-current::after,
+lightning-progress-step.slds-path__item.slds-is-current::before {
+    background-image: none;
+}
+
+lightning-progress-step.slds-is-complete:hover[c-flowProgressBar_flowProgressBar] {
+    background: #5D0131;
+}
+
+lightning-progress-step.slds-is-complete:hover[c-flowProgressBar_flowProgressBar]::before,
+lightning-progress-step.slds-is-complete:hover[c-flowProgressBar_flowProgressBar]::after {
+    background: #5D0131;
+}
+
+.slds-path__nav.slds-is-active.slds-path__stage.slds-path__title {
+    transform: none;
+}
+
+lightning-progress-step.slds-path__item.slds-is-current.slds-path__link.slds-path__stage.slds-path__title {
+    color: #ffffff;
+}
+
+
+/*
+lightning-progress-step.slds-path__item.slds-is-current.slds-path__link {
+    color: white !important;
+}*/
+
+
+/* for loop end */

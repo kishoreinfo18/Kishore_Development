@@ -1,0 +1,12 @@
+.this .my-card {
+    background-color: rgb(191, 210, 226);
+}
+
+.viewcontainer {
+    color: rgb(0, 109, 204);
+    box-shadow: none;
+}
+
+.myTable table>thead .slds-cell-fixed.slds-has-button-menu {
+    background: antiquewhite;
+}

@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <assignments>
+        <description>Here we can assign the case type, subtype  and description for the respective case reason.</description>
+        <name>Assign_Additional_Lift</name>
+        <label>Assign Additional Lift</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Type</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Service Enquiry</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Subject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Type</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Sub_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Additional Lift</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Here we can assign the case type, subtype  and description for the respective case reason.</description>
+        <name>Assign_Missed_Collection</name>
+        <label>Assign Missed Collection</label>
+        <locationX>1370</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Type</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Service Enquiry</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Sub_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Missed Collection</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Subject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Sub_Type__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Here we can assign the case type, subtype  and description for the respective case reason.</description>
+        <name>Assign_type_as_Complaint</name>
+        <label>Assign type as Complaint</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Type</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Complaint</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Subject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Type</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Here we can assign the case type, subtype  and description for the respective case reason.</description>
+        <name>Assign_type_as_Documentation_Request</name>
+        <label>Assign type as Documentation Request</label>
+        <locationX>1634</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Type</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Documentation Request</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Subject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Type</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Here we can assign the case type, subtype  and description for the respective case reason.</description>
+        <name>Assign_type_as_General_Enquiry</name>
+        <label>Assign type as General Enquiry</label>
+        <locationX>842</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Type</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>General Enquiry</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Subject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Type</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Here we can assign the case type, subtype  and description for the respective case reason.</description>
+        <name>Assign_type_as_Health_Safety</name>
+        <label>Assign type as Health &amp; Safety</label>
+        <locationX>1106</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Type</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Health and Safety Report</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Subject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Type</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Here we can assign the case type, subtype  and description for the respective case reason.</description>
+        <name>Assign_Type_as_Sales_Enquiry</name>
+        <label>Assign Type as Sales Enquiry</label>
+        <locationX>2162</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Type</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Sales Enquiry</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Subject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Type</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Here we can assign the case type, subtype  and description for the respective case reason.</description>
+        <name>Assign_type_as_Service_Enquiry</name>
+        <label>Assign  type as Service Enquiry</label>
+        <locationX>1898</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Type</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Service Enquiry</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Subject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Type</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Here we can assign the case type, subtype  and description for the respective case reason.</description>
+        <name>Assign_type_for_Container_Enquiry</name>
+        <label>Assign type for  Container Enquiry</label>
+        <locationX>578</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Type</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Container Enquiry</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Subject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Type</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <description>It will check the case reason</description>
+        <name>Check_the_reason_values</name>
+        <label>Check the reason values</label>
+        <locationX>1238</locationX>
+        <locationY>311</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Additional_Lift</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Reason__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Additional Lift</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Additional_Lift</targetReference>
+            </connector>
+            <label>Additional Lift</label>
+        </rules>
+        <rules>
+            <name>Complaint</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Reason__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Complaint</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_type_as_Complaint</targetReference>
+            </connector>
+            <label>Complaint</label>
+        </rules>
+        <rules>
+            <name>ContainerEnquiry</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Reason__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Container Enquiry</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_type_for_Container_Enquiry</targetReference>
+            </connector>
+            <label>Container Enquiry</label>
+        </rules>
+        <rules>
+            <name>General_Enquiry</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Reason__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>General Enquiry</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_type_as_General_Enquiry</targetReference>
+            </connector>
+            <label>General Enquiry</label>
+        </rules>
+        <rules>
+            <name>Health_Safety</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Reason__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Health &amp; Safety</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_type_as_Health_Safety</targetReference>
+            </connector>
+            <label>Health &amp; Safety</label>
+        </rules>
+        <rules>
+            <name>Missed_Collection</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Reason__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Missed Collection</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Missed_Collection</targetReference>
+            </connector>
+            <label>Missed Collection/Delivery</label>
+        </rules>
+        <rules>
+            <name>Request_for_Information</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Reason__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Request for Information</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_type_as_Documentation_Request</targetReference>
+            </connector>
+            <label>Request for Information</label>
+        </rules>
+        <rules>
+            <name>Service_Enquiry</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Reason__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Service Enquiry</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_type_as_Service_Enquiry</targetReference>
+            </connector>
+            <label>Service Enquiry</label>
+        </rules>
+        <rules>
+            <name>Sales_Enquiry</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Reason__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Sales Enquiry</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Type_as_Sales_Enquiry</targetReference>
+            </connector>
+            <label>Sales Enquiry</label>
+        </rules>
+    </decisions>
+    <description>Assign case type and subtype mapping the reason values in the contact support form int he portal.</description>
+    <environments>Default</environments>
+    <interviewLabel>Assign case values for the customer portal cases {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Assign case values for the customer portal cases</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>1112</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_the_reason_values</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Origin</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Portal</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Reason__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

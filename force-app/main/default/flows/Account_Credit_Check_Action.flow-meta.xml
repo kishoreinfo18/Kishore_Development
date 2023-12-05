@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Account_credit_check_completed_Central</name>
+        <label>Account_credit_check_completed_Central</label>
+        <locationX>1181</locationX>
+        <locationY>355</locationY>
+        <actionName>Account.Account_Credit_check_completed_Central</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Account.Account_Credit_check_completed_Central</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Credit_check_completed_in_the_account_North</name>
+        <label>Credit check completed in the account - North</label>
+        <locationX>1170</locationX>
+        <locationY>5</locationY>
+        <actionName>Account.Account_Credit_check_completed_North</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Account.Account_Credit_check_completed_North</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Credit_check_completed_in_the_account_South_East</name>
+        <label>Credit check completed in the account - South East</label>
+        <locationX>1175</locationX>
+        <locationY>185</locationY>
+        <actionName>Account.Account_Credit_check_completed_South_East</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Account.Account_Credit_check_completed_South_East</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Credit_check_completed_in_the_account_South_West</name>
+        <label>Credit check completed in the account - South West</label>
+        <locationX>1180</locationX>
+        <locationY>520</locationY>
+        <actionName>Account.Account_Credit_check_completed_South_West</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Account.Account_Credit_check_completed_South_West</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>53.0</apiVersion>
+    <decisions>
+        <name>Check_the_account_region</name>
+        <label>Check the account region</label>
+        <locationX>706</locationX>
+        <locationY>159</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_North</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Region__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>North</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Credit_check_completed_in_the_account_North</targetReference>
+            </connector>
+            <label>Is North?</label>
+        </rules>
+        <rules>
+            <name>Is_South_West</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Region__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>South West</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Credit_check_completed_in_the_account_South_West</targetReference>
+            </connector>
+            <label>Is South West?</label>
+        </rules>
+        <rules>
+            <name>Is_South_East</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Region__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>South East</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Credit_check_completed_in_the_account_South_East</targetReference>
+            </connector>
+            <label>Is South East?</label>
+        </rules>
+        <rules>
+            <name>Is_Central</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Region__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Central</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Account_credit_check_completed_Central</targetReference>
+            </connector>
+            <label>Is Central?</label>
+        </rules>
+        <rules>
+            <name>Is_Connet</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Region__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Connect</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Is Connet?</label>
+        </rules>
+    </decisions>
+    <description>When the credit check completed is checked by the finance team, the email alert is sent to the team according to the region</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>Queue_Region</name>
+        <dataType>String</dataType>
+        <expression>IF( TEXT({!$Record.Region__c}) = &apos;North&apos;, &apos;I_C_North_Region_Queue&apos;, 
+			  IF(TEXT({!$Record.Region__c}) = &apos;Central&apos; , &apos;I_C_Central_Region_Queue&apos;, 
+			 IF(TEXT({!$Record.Region__c}) = &apos;South West&apos;, &apos;I_C_South_West_Region_Queue&apos;, 
+			 IF(TEXT({!$Record.Region__c}) = &apos;South East&apos;, &apos;I_C_South_East_Admin&apos;, &apos;&apos;) ) ) )</expression>
+    </formulas>
+    <interviewLabel>Account_Credit_Check_Action {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Account_Credit_Check_Action</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_a_case</name>
+        <label>Create a case</label>
+        <locationX>502</locationX>
+        <locationY>226</locationY>
+        <connector>
+            <targetReference>Check_the_account_region</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>AccountId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <stringValue>{!$Record.Name} account is now open and ready for use. Please follow the additional steps to ensure the Service Address is visible in Clear.NET: Go to {!$Record.Name} account screen 1. Click on the Related site(s) 2. Amend the Customer type from &quot;Prospect&quot; to &quot;Site&quot; 3. Amend the Site account status from &quot;Pending&quot; to &quot;Active&quot; 4. Click Save</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Internal_Only__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Origin</field>
+            <value>
+                <stringValue>Internal</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>Get_Queue.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Sub_Type__c</field>
+            <value>
+                <stringValue>New Account</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>New Account - {!$Record.Account_Number__c} is now open.</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Type</field>
+            <value>
+                <stringValue>New Account</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Queue</name>
+        <label>Get Queue</label>
+        <locationX>517</locationX>
+        <locationY>19</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Create_a_case</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Queue_Region</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Get_Queue</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Credit_Check_Completed__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Account</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>Subject</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 16px; font-family: &amp;quot;Salesforce Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, &amp;quot;Sans Serif&amp;quot;; color: rgb(0, 0, 0);&quot;&gt;New Account - {!$Record.Name} - {!$Record.Account_Number__c} - {!$Record.Owner.Name}&lt;/span&gt;&lt;/p&gt;</text>
+    </textTemplates>
+</Flow>

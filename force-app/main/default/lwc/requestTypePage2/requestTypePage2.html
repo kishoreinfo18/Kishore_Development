@@ -1,0 +1,96 @@
+<template>
+    <lightning-quick-action-panel header="Request Details">
+        <template if:true={isInvestmentOnboardingRequestType}>
+            <lightning-combobox
+                name="Account Type"
+                label="Account Type"
+                value={accountTypeValue}
+                placeholder="Account Type"
+                options={accountTypeOptions}
+                onchange={handleAccountTypeChange}
+                required="true">
+            </lightning-combobox>
+            <lightning-combobox
+                name="Funding Type"
+                label="Funding Type"
+                value={accountTypeValue}
+                placeholder="Funding Type"
+                options={fundingTypeOptions}
+                onchange={handleFundingTypeChange}
+                required="true">
+            </lightning-combobox>
+            <lightning-input
+                type="number"
+                label="Funding Amount"
+                value=""
+                formatter="currency" 
+                step=".01"
+                class="FundingAmount"
+                data-name="FundingAmount" required>
+            </lightning-input>
+            <lightning-combobox
+                name="Priority"
+                label="Priority"
+                value={priorityValue}
+                placeholder="Priority.."
+                options={priorityOptions}
+                onchange={handlePriorityChange}
+                required="true">
+            </lightning-combobox>
+
+            <lightning-input-rich-text
+                label="Additional Details"
+                value={additionalDetails}
+                onchange={handleChange}
+                label-visible="true"
+                required="true">
+            </lightning-input-rich-text>
+            <div class="slds-p-around_medium lgc-bg">
+                <lightning-input type="file" label="Attachment" onchange={handleFileUpload} required></lightning-input>
+            </div>
+        </template>
+        
+        <!-- request type is Money Movement-->
+        <template if:true={isMoneyMovement}>
+            <lightning-input type="text" label="From Account" value="" maxlength="100" data-name="fromAccount" required message-when-too-long="From account value should not be more than 100 characters."></lightning-input>
+            <lightning-input type="text" label="To Account" value="" maxlength="100" data-name="toAccount" required message-when-too-long="To account value should not be more than 100 characters."></lightning-input>
+            <lightning-input type="number" label="Transfer Amount" value="" formatter="currency" step=".01" data-name="transferAmount" required> </lightning-input>
+            <lightning-combobox
+                name="Priority"
+                label="Priority"
+                value={priorityValue}
+                placeholder="Priority.."
+                options={priorityOptions}
+                onchange={handlePriorityChange}
+                required="true">
+            </lightning-combobox>
+            <lightning-input-rich-text
+                label="Additional Details"
+                value={additionalDetails}
+                onchange={handleChange}
+                label-visible="true"
+                required="true">
+            </lightning-input-rich-text>
+            <div class="slds-p-around_medium lgc-bg">
+                <lightning-input type="file" label="Attachment" onchange={handleFileUpload} required></lightning-input>
+            </div>
+        </template>
+        <div slot="footer">
+            <lightning-button
+                variant="neutral"
+                label="Go back" 
+                onclick={handleGoBack}
+                class="slds-m-left_x-small"
+            ></lightning-button>
+            <lightning-button
+                variant="neutral"
+                label="Submit Request" 
+                class="slds-m-left_x-small" 
+                onclick={handleCreateServiceRequest}
+            ></lightning-button>
+            <c-cancel-button button-text={cancelButtonName} class="slds-m-left_x-small">
+            </c-cancel-button>
+        </div>
+        
+    </lightning-quick-action-panel>
+</template>

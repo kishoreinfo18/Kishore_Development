@@ -1,0 +1,12 @@
+<template>
+
+    <lightning-card>
+        Name of animal is {name}
+        <br/>
+        Age of animal is {age}
+        <br/>
+        <lightning-input label='Enter new age' value={age} onchange={newAgeUpdate}></lightning-input>
+        <lightning-button label='Modify Age' onclick={updateAge}></lightning-button>
+    </lightning-card> 
+
+</template>

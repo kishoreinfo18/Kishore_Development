@@ -1,0 +1,54 @@
+<template>
+        <div class="slds-grid slds-page-header forceRelatedListCardHeader" data-aura-rendered-by="166:576;a" data-aura-class="forceRelatedListCardHeader">
+                <header class="slds-media slds-media--center slds-has-flexi-truncate" data-aura-rendered-by="167:576;a">
+                        <div class="slds-media__figure stencil slds-avatar slds-avatar_small" aria-hidden="true" data-aura-rendered-by="168:576;a">
+                                <div class="extraSmall forceEntityIcon" style="background-color: #A094ED" data-aura-rendered-by="5:1205;a" data-aura-class="forceEntityIcon">
+                                        <span data-aura-rendered-by="8:1205;a" class="uiImage" data-aura-class="uiImage">
+                                                <img data-aura-rendered-by="6:1205;a" src={iconName} class="icon " alt={title} title={title}>
+                                        </span>
+                                </div>
+                        </div>
+                        <div class="slds-media__body" data-aura-rendered-by="819:0">
+                                <h2 class="slds-card__header-title" id="header_802:0" data-aura-rendered-by="820:0">
+                                        <span class="slds-truncate slds-m-right--xx-small" title={title} data-aura-rendered-by="822:0">{title}</span>
+                                </h2>
+                        </div>
+                </header>
+                <ul class="branding-actions slds-button-group slds-m-left--xx-small small oneActionsRibbon forceActionsContainer" data-aura-rendered-by="1681:0" data-aura-class="oneActionsRibbon forceActionsContainer">
+                        <li class="slds-button slds-button--neutral" data-aura-rendered-by="1697:0">
+                                <template if:true={privilegeCreateObj}>
+                                        <lightning-button variant="Neutral" label="New" title="Primary action" onclick={navigateToCreate}></lightning-button>
+                                </template>
+</li>
+<li class="slds-button slds-button--neutral" data-aura-rendered-by="1697:0">
+    <template if:true={privilegeDeleteObj}>
+                                        <lightning-button variant="Neutral" label="Delete" onclick={handleDelete} ></lightning-button>
+                                </template>
+</li>
+</ul>
+</div>
+<template if:true={dataLst}>
+        <div class="myTable">
+                <lightning-datatable data={dataLst} columns={objectColumns} key-field="Id" 
+                onsort={handleSortdata}
+                sorted-by={sortBy}
+                sorted-direction={sortDirection}
+                onsave={handleSave}>
+                </lightning-datatable>
+        </div>
+        </template>
+<template if:true={errorLst}>
+                {error}               
+        </template>
+<template if:true={viewAllVar}>
+        <div class="viewcontainer">
+                <lightning-layout>
+                        <div class="slds-align_absolute-center">
+                                <lightning-layout-item padding="slds-p-around_small">
+                                        <lightning-button variant="base" label="View All" onclick={navigateRelatedListView} class="slds-p-around_small"></lightning-button>
+                                </lightning-layout-item>
+                        </div>                        
+                </lightning-layout>
+        </div>
+</template>
+</template>

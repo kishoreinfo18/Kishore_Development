@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <assignments>
+        <name>Is_Parent_Linked_Assigment</name>
+        <label>Is Parent Linked Assigment</label>
+        <locationX>1140</locationX>
+        <locationY>409</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Is_Parent_Account_Linked__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Parent_Link_check</name>
+        <label>Parent Link check</label>
+        <locationX>906</locationX>
+        <locationY>406</locationY>
+        <defaultConnectorLabel>Is Parent Not Linked</defaultConnectorLabel>
+        <rules>
+            <name>Is_Parent_Linked</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_ACR_with_Parent_Account</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Is_Parent_Linked_Assigment</targetReference>
+            </connector>
+            <label>Is Parent Linked</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Site_Account_Check</name>
+        <label>Site Account Check</label>
+        <locationX>620</locationX>
+        <locationY>150</locationY>
+        <defaultConnectorLabel>Is not Linked with Site Account</defaultConnectorLabel>
+        <rules>
+            <name>Is_Linked_with_Site_Account</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>IC_Customer_Site</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_ACR_with_Parent_Account</targetReference>
+            </connector>
+            <label>Is Linked with Site Account</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>ACR Before Insert or Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>ACR Before Insert or Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_ACR_with_Parent_Account</name>
+        <label>Get ACR with Parent Account</label>
+        <locationX>914</locationX>
+        <locationY>150</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Parent_Link_check</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Account.ParentId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>ContactId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>AccountContactRelation</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>142</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Site_Account_Check</targetReference>
+        </connector>
+        <object>AccountContactRelation</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>AccountContactRelationLst</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>AccountContactRelation</objectType>
+    </variables>
+</Flow>
